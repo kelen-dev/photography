@@ -1,0 +1,11 @@
+@mixin button-($name, $color) {
+    .btn-#{$name} {
+        background: #{$color};
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        margin-left: 1rem;
+    }
+}
+
+
