@@ -1342,9 +1342,19 @@ i + i {
 #p-propos article:first-child {
   margin-bottom: 2rem;
 }
+#p-propos article h5 {
+  margin-bottom: 0.4rem;
+}
+#p-propos article p {
+  text-align: justify;
+}
+#p-propos article p + h5 {
+  margin-top: 1rem;
+}
 #p-propos #qui-suis-je .title h2, #p-propos #travail .title h2 {
   position: relative;
   padding-bottom: 0.6rem;
+  width: fit-content;
 }
 #p-propos #qui-suis-je .title h2:after, #p-propos #travail .title h2:after {
   content: "";
@@ -1361,7 +1371,7 @@ i + i {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 150px;
+  width: 100%;
   height: 2px;
   background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
 }
@@ -1370,18 +1380,9 @@ i + i {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 300px;
+  width: 100%;
   height: 2px;
   background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-}
-#p-propos h5 {
-  margin-bottom: 0.4rem;
-}
-#p-propos p {
-  text-align: justify;
-}
-#p-propos p + h5 {
-  margin-top: 1rem;
 }
 
 /* ==========================================================================
