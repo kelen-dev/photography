@@ -24,7 +24,7 @@
                             @if(Route::is('home'))
                             @else
                                 <li class="nav-item">
-                                    <a class="nav-link @if(Route::current()->getName('home')) active @endif"
+                                    <a class="nav-link @if(Route::is('home')) active @endif"
                                        aria-current="page"
                                        href="{{ route('home') }}">
                                         <i class="bi bi-house"> Accueil</i>
@@ -32,19 +32,19 @@
                                 </li>
                             @endif
                             <li class="nav-item">
-                                <a class="nav-link @if(Route::current()->getName('cv')) active @endif"
+                                <a class="nav-link @if(Route::is('cv')) active @endif"
                                    href="{{ route('cv') }}">
                                     <i class="bi bi-file-earmark-pdf"> CV</i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link @if(Route::current()->getName('a-propos')) active @endif"
+                                <a class="nav-link @if(Route::is('a-propos')) active @endif"
                                    href="{{ route('a-propos') }}">
                                     <i class="bi bi-clipboard"> A propos</i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link @if(Route::current()->getName('contact.index')) active @endif"
+                                <a class="nav-link @if(Route::is('contact.index')) active @endif"
                                    href="{{ route('contact.index') }}">
                                     <i class="bi bi-envelope"> Contact</i>
                                 </a>
