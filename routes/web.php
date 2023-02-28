@@ -15,15 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{locale}', function ($locale) {
-    if (!in_array($locale, ['en', 'fr'])) {
-        abort(400);
-    }
-
-    \Illuminate\Support\Facades\App::setLocale($locale);
-
-});
-
 Route::get('/', function () {
     return view('home');
 })->name('home');
