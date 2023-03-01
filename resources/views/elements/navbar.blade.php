@@ -66,7 +66,7 @@
 
                     <div class="role">
                         <div class="block_KelenS"></div>
-                        <p class="p_KelenS">Développeur web front-end</p>
+                        <p class="p_KelenS">Développeur web</p>
                     </div>
 
                 </div>
