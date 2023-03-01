@@ -604,11 +604,12 @@ i + i {
 #a-propos .social-media-links h3 {
   position: relative;
   padding-bottom: 0.6rem;
+  width: fit-content;
 }
 #a-propos .social-media-links h3:hover:after {
   content: "";
   position: absolute;
-  width: 220px;
+  width: 100%;
 }
 #a-propos .social-media-links h3:after {
   content: "";
@@ -740,11 +741,12 @@ i + i {
   position: relative;
   padding-bottom: 0.6rem;
   margin-bottom: 0.4rem;
+  width: fit-content;
 }
 #abstract .langages h3:hover:after {
   content: "";
   position: absolute;
-  width: 180px;
+  width: 100%;
 }
 #abstract .langages h3:after {
   content: "";
@@ -1140,11 +1142,12 @@ i + i {
   position: relative;
   padding-bottom: 0.6rem;
   margin-bottom: 0.4rem;
+  width: fit-content;
 }
 #abstract .education h3:hover:after {
   content: "";
   position: absolute;
-  width: 140px;
+  width: 100%;
 }
 #abstract .education h3:after {
   content: "";
@@ -1178,11 +1181,12 @@ i + i {
   position: relative;
   padding-bottom: 0.6rem;
   margin-bottom: 0.4rem;
+  width: fit-content;
 }
 #abstract .experience h3:hover:after {
   content: "";
   position: absolute;
-  width: 150px;
+  width: 100%;
 }
 #abstract .experience h3:after {
   content: "";
@@ -1264,11 +1268,12 @@ i + i {
   position: relative;
   padding-bottom: 0.6rem;
   margin-bottom: 0.4rem;
+  width: fit-content;
 }
 #projects ul li h3:hover:after {
   content: "";
   position: absolute;
-  width: 210px;
+  width: 100%;
 }
 #projects ul li h3:after {
   content: "";

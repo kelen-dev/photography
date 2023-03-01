@@ -106,12 +106,13 @@
         h3 {
             position: relative;
             padding-bottom: 0.6rem;
+            width: fit-content;
 
             &:hover {
                 &:after {
                     content: "";
                     position: absolute;
-                    width: 220px;
+                    width: 100%;
                 }
             }
 
@@ -275,12 +276,13 @@
             position: relative;
             padding-bottom: .6rem;
             margin-bottom: .4rem;
+            width: fit-content;
 
             &:hover {
                 &:after {
                     content: "";
                     position: absolute;
-                    width: 180px;
+                    width: 100%;
                 }
             }
 
@@ -388,12 +390,13 @@
             position: relative;
             padding-bottom: .6rem;
             margin-bottom: .4rem;
+            width: fit-content;
 
             &:hover {
                 &:after {
                     content: "";
                     position: absolute;
-                    width: 140px;
+                    width: 100%;
                 }
             }
 
@@ -437,12 +440,13 @@
             position: relative;
             padding-bottom: .6rem;
             margin-bottom: .4rem;
+            width: fit-content;
 
             &:hover {
                 &:after {
                     content: "";
                     position: absolute;
-                    width: 150px;
+                    width: 100%;
                 }
             }
 
@@ -540,12 +544,13 @@
                 position: relative;
                 padding-bottom: .6rem;
                 margin-bottom: .4rem;
+                width: fit-content;
 
                 &:hover {
                     &:after {
                         content: "";
                         position: absolute;
-                        width: 210px;
+                        width: 100%;
                     }
                 }
 
