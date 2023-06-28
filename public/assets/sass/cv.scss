@@ -1,32 +1,12 @@
+@import "mixins";
+
 #p-cv {
-    .title {
-        h2 {
-            position: relative;
-            padding-bottom: 0.6rem;
+    @include h3;
+}
 
-            &:hover {
-                &:after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100px;
-                    height: 2px;
-                    background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-                    transition: width .4s ease-in-out;
-                }
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 60px;
-                height: 2px;
-                background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-                transition: width .4s ease-in-out;
-            }
-        }
-    }
+/* ==========================================================================
+   Section CV:
+   ========================================================================== */
+#cv {
+    text-align: center;
 }

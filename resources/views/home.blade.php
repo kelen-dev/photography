@@ -16,46 +16,46 @@
                 {{-- Left part --}}
 
                 <div class="info">
-                    <img src="{{ asset('assets/img/avataaars.svg') }}" width="264px" height="280px" alt="Logo">
+                    <img src="{{ asset('assets/img/avataaars.svg') }}" width="264px" height="280px" alt="Logo" class="load-hidden">
 
-                    <div id="name">
-                        <h3>
+                    <div id="name load-hidden">
+                        <h4>
                             Nom :
-                        </h3>
+                        </h4>
                         <p>
                             Sean SEGURA
                         </p>
                     </div>
-                    <div id="age">
-                        <h3>
+                    <div id="age load-hidden">
+                        <h4>
                             Âge :
-                        </h3>
+                        </h4>
                         <p>
-                            {{ config('kelens.age') }} ans
+                            {{ config('kelens.Info.age') }} ans
                         </p>
                     </div>
-                    <div id="mail">
-                        <h3>
+                    <div id="mail load-hidden">
+                        <h4>
                             Email :
-                        </h3>
-                        <a href="mailto:{{ config('kelens.email') }}">
-                            {{ config('kelens.email') }}
+                        </h4>
+                        <a href="mailto:{{ config('kelens.Info.email') }}">
+                            {{ config('kelens.Info.email') }}
                         </a>
                     </div>
-                    <div id="tel">
-                        <h3>
+                    <div id="tel load-hidden">
+                        <h4>
                             Téléphone :
-                        </h3>
+                        </h4>
                         <a href="tel:0641492515">
-                            06 41 49 25 15
+                            {{ config('kelens.Info.tel') }}
                         </a>
                     </div>
-                    <div id="site">
-                        <h3>
+                    <div id="site load-hidden">
+                        <h4>
                             Site professionnel :
-                        </h3>
+                        </h4>
                         <a href="https://kelens.fr">
-                            kelens.fr
+                            {{ config('kelens.Info.site') }}
                         </a>
                     </div>
                 </div>
@@ -67,14 +67,14 @@
                 <div class="about">
                     <p>
                         Sean Aka KelenS, je suis un jeune développeur web Front-End depuis 2018.
-                        J’ai commencé le développement vers 14 ans, maintenant, j’en ai {{ config('kelens.age') }}.
+                        J’ai commencé le développement vers 14 ans, maintenant, j’en ai {{ config('kelens.Info.age') }}.
                         <br>
+                    </p>
+                    <p>
                         J'ai développé durant mon parcours beaucoup de projets et fait beaucoup de sites pour
-                        moi-même, mon premier projet
-                        ayant été concrétisé est un site pour des serveurs Minecraft. J'ai aussi travaillé pour
-                        des
-                        projets Minecraft, et pour des clients, en leur développant principalement la partie
-                        front-end de leur site.
+                        moi-même, mon premier projet ayant été concrétisé est un site pour des serveurs Minecraft. J'ai
+                        aussi travaillé pour des projets Minecraft, et pour des clients, en leur développant
+                        principalement la partie front-end de leur site.
                     </p>
 
                     <a href="{{ route('a-propos') }}" target="_blank" class="btn btn-principal">
@@ -89,7 +89,10 @@
                     </h3>
 
                     <blockquote class="text-white">
-                        Assumez-vous comme vous êtes, soyez vous-même.
+                        ~ Soyez vous-même, car personne ne peut le faire mieux que vous. Ne laissez pas les autres vous
+                        dicter qui vous devez être ou comment vous devez vivre. Vous avez le droit d'exprimer votre
+                        personnalité, vos opinions, vos passions et vos rêves. Vous êtes unique et précieux, et vous
+                        méritez le respect et l'amour de ceux qui vous entourent ~
                     </blockquote>
                     <cite>
                         Sean SEGURA
@@ -144,17 +147,24 @@
                 {{-- Left part --}}
 
                 <div class="hobby">
+                    <i class="bi bi-camera bi-2X">
+                        <p>
+                            Photos
+                        </p>
+                    </i>
+
                     <i class="bi bi-music-note-beamed bi-2X">
                         <p>
                             Musique
                         </p>
                     </i>
 
-                    <i class="bi bi-camera bi-2X">
+                    <i class="bi bi-film bi-2X">
                         <p>
-                            Photos
+                            Films et séries
                         </p>
                     </i>
+
                     <i class="bi bi-code bi-2X">
                         <p>
                             Développement web
@@ -238,7 +248,7 @@
                         </li>
 
                         <li class="name">
-                            Formation Futur Designer
+                            Formation Futur Designer chez Osengo by Aformac
                         </li>
                         <li class="description">
                             Passage du PIX, développement web (html, css, scss, Bootstrap), maquettage, design
@@ -291,10 +301,12 @@
                         </li>
 
                         <li class="description">
-                            <a href="https://www.emmaus43.fr/" title="Accéder au site">Emmaüs</a> : Montage de meuble,
+                            <a href="https://www.emmaus43.fr/" title="Accéder au site"><strong>Emmaüs</strong></a> :
+                            Montage de meuble,
                             ramassage (vide maison), réception des dons au quai
                             <br>
-                            <a href="https://www.label-emmaus.co/fr/" title="Accéder au site">Label</a> : Prise de
+                            <a href="https://www.label-emmaus.co/fr/" title="Accéder au site"><strong>Label</strong></a>
+                            : Prise de
                             photos des produits, gestion des mises en vente de produits sur label43
                         </li>
                     </ul>
@@ -312,8 +324,39 @@
                         <li class="description">
                             Développement d'un site web sous le CMS WordPress
                             <br>
-                            Accédez au site <a href="https://digitalboyvisual.kelens.fr/"
-                                               title="Site web de DigitalBoyVisual" target="_blank">ici</a>
+                            Le site n'est plus en ligne depuis le 17 mai 2023.
+                        </li>
+                    </ul>
+
+                    {{-- CEJ --}}
+                    <ul id="cej">
+                        <li class="date">
+                            2 mai 2022 - 2 mai 2023 (1 an)
+                        </li>
+
+                        <li class="name">
+                            Contrat d'Engagement Jeune
+                        </li>
+
+                        <li class="description">
+                            Engagement de 15/20 heures par semaines
+                        </li>
+                    </ul>
+
+                    {{-- La Clandestine --}}
+                    <ul id="la-clandestine">
+                        <li class="date">
+                            septembre 2021 - 16 mai 2023 (1 an et 9 mois)
+                        </li>
+
+                        <li class="name">
+                            Développeur du site de la Clandestine
+                        </li>
+
+                        <li class="description">
+                            Développement + maintenance du site de <a href="https://ecolededanselaclandestine.fr"
+                                                                      title="Accéder au site"><strong>la
+                                    Clandestine</strong></a> et de l'hébergement web
                         </li>
                     </ul>
 
@@ -425,17 +468,20 @@
                             </span>
                         </li>
                     </ul>
+                    <article>
+                        KelenS Corp est une entreprise de développement web front-end fondée par Sean SEGURA, un jeune
+                        développeur web Front-End depuis 2018.
+                        <br>
+                        L'entreprise propose des sites web sur mesure avec créativité, qualité et rapidité garanties.
+                        Vous pouvez contacter l'entreprise pour un devis gratuit.
+                        <br>
+                        Vous pouvez également visiter leur <a href="https://kelens.fr" title="Accéder au site"><strong>site
+                                web</strong></a> pour en savoir plus sur leur travail.
+                    </article>
                     <img class="img-fluid" src="{{ asset('assets/img/projects/accueil-kelens-fr.webp') }}"
                          alt="KelenS CORP">
                 </li>
             </ul>
         </div>
-    </section>
-
-    {{-- Download CV --}}
-    <section id="cv">
-        <a href="{{ asset('assets/pdf/cv.pdf') }}" target="_blank" class="btn btn-principal">
-            Télécharger le CV
-        </a>
     </section>
 @endsection

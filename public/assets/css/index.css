@@ -2,6 +2,9 @@
 /* ==========================================================================
    Styles:
    ========================================================================== */
+/* ==========================================================================
+    Créer une icon x2 à x4:
+========================================================================== */
 .bi-2X {
   font-size: 2rem;
 }
@@ -14,49 +17,107 @@
   font-size: 4rem;
 }
 
+/* ==========================================================================
+    HTML:
+========================================================================== */
 html {
   max-width: 100%;
+  /* ==========================================================================
+      Button to TOP:
+  ========================================================================== */
+  /* ==========================================================================
+      Liens:
+  ========================================================================== */
+  /* ==========================================================================
+      Responsive:
+  ========================================================================== */
 }
-
-section {
-  padding: 2rem 0 2rem 0;
+html .sr .load-hidden {
+  visibility: hidden;
 }
-
-h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
-  font-family: Carter One, cursive;
+html #button {
+  opacity: 0;
+  color: #fff;
+  right: -40px;
+  bottom: 260px;
+  z-index: 1000;
+  position: fixed;
+  text-align: center;
+  visibility: hidden;
+  line-height: 1.4rem;
+  display: inline-block;
+  padding: 0.2rem 0 0 0.2rem;
+  background-color: rgba(16, 15, 15, 0.6);
+  transition: opacity 0.5s, visibility 0.5s;
+  transform: rotate(-90deg) translate(-50%, 0);
 }
-
-.h3, h3 {
-  font-size: 1.75rem;
-  color: #ebb455;
+html #button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  z-index: -1;
+  height: 2px;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transition: transform 0.6s;
+  transform-origin: 100% 0;
+  background: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
 }
-
-a {
+html #button:hover {
+  cursor: pointer;
+}
+html #button:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+html #button.show {
+  opacity: 1;
+  visibility: visible;
+}
+html a {
   text-decoration: none;
   color: var(--color-white);
+  transition: ease-in-out 0.2s;
 }
-
-a, p, i {
+html a:hover {
+  color: #708AD4;
+}
+html a, html p, html i {
   font-family: Noto Sans JP, sans-serif;
   color: var(--color-white);
 }
-
-.bg-accent-darker {
+html .bg-accent-darker {
   background-color: hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), var(--bg-o, 1));
 }
-
-.content {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-}
-
-.wrapper {
+html .wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 10px;
 }
-
-.btn {
+html .content {
+  /* ==========================================================================
+      Sections:
+  ========================================================================== */
+  /* ==========================================================================
+      Titres:
+  ========================================================================== */
+  /* ==========================================================================
+      Boutons:
+  ========================================================================== */
+  /* ==========================================================================
+      Icons:
+  ========================================================================== */
+}
+html .content section {
+  padding: 2rem 0 2rem 0;
+}
+html .content h1, html .content h1 a, html .content h2, html .content h2 a, html .content h3, html .content h3 a, html .content h4, html .content h4 a, html .content h5, html .content h5 a, html .content h6, html .content h6 a {
+  font-family: Carter One, cursive;
+}
+html .content .btn {
   padding: 1rem;
   background: transparent;
   width: 200px;
@@ -67,19 +128,16 @@ a, p, i {
   vertical-align: middle;
   line-height: 0;
 }
-
-.btn-principal {
+html .content .btn.btn-principal {
   background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
   border-radius: 20px;
 }
-.btn-principal:hover {
+html .content .btn.btn-principal:hover {
   color: var(--color-white);
 }
-
-i + i {
+html .content i + i {
   margin-top: 1rem;
 }
-
 /* ==========================================================================
    Navbar:
    ========================================================================== */
@@ -190,6 +248,13 @@ i + i {
 
 .home-background {
   background: url("../img/banniere.webp") no-repeat center/cover;
+  position: relative;
+  min-height: 100vh;
+  box-shadow: inset 0 0 20px hsla(225deg, 33%, 7%, 0.5);
+}
+
+.setup-background {
+  background: url("../img/Setup 2023.webp") no-repeat center/cover;
   position: relative;
   min-height: 100vh;
   box-shadow: inset 0 0 20px hsla(225deg, 33%, 7%, 0.5);
@@ -517,9 +582,9 @@ i + i {
    Section à propos:
    ========================================================================== */
 #a-propos h2 {
-  padding-bottom: 0.6rem;
   font-size: 4rem;
   margin-left: 12rem;
+  padding: 0.6rem 0 0.6rem 0;
   text-shadow: 0 6px 0 black;
 }
 #a-propos .info {
@@ -551,7 +616,7 @@ i + i {
 #a-propos .info div:last-child {
   margin-bottom: 0;
 }
-#a-propos .info div h3 {
+#a-propos .info div h4 {
   color: var(--color-title-propos);
   margin-right: 0.2rem;
   font-size: 1rem;
@@ -574,6 +639,32 @@ i + i {
   grid-column: 4/13;
   grid-row: 2;
 }
+#a-propos .citation h3 {
+  font-size: 1.75rem;
+  color: #ebb455;
+  position: relative;
+  padding-bottom: 0.6rem !important;
+  margin-bottom: 0.4rem !important;
+  width: fit-content;
+}
+#a-propos .citation h3:hover {
+  cursor: default;
+}
+#a-propos .citation h3:hover:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+}
+#a-propos .citation h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 20%;
+  background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
+  transition: width 0.4s ease-in-out;
+}
 #a-propos .citation blockquote {
   padding: 0 0 0 2rem;
 }
@@ -595,16 +686,22 @@ i + i {
   color: #888;
 }
 #a-propos .social-media-links {
-  grid-column: 4/8;
+  grid-column: 4/13;
   grid-row: 3;
   overflow: hidden;
   padding-bottom: 4px;
   width: 100%;
 }
 #a-propos .social-media-links h3 {
+  font-size: 1.75rem;
+  color: #ebb455;
   position: relative;
-  padding-bottom: 0.6rem;
+  padding-bottom: 0.6rem !important;
+  margin-bottom: 0.4rem !important;
   width: fit-content;
+}
+#a-propos .social-media-links h3:hover {
+  cursor: default;
 }
 #a-propos .social-media-links h3:hover:after {
   content: "";
@@ -617,7 +714,7 @@ i + i {
   bottom: 0;
   left: 0;
   height: 2px;
-  width: 100px;
+  width: 20%;
   background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
   transition: width 0.4s ease-in-out;
 }
@@ -663,8 +760,14 @@ i + i {
   }
 }
 @media screen and (max-width: 960px) {
+  #a-propos .info {
+    width: max-content;
+  }
   #a-propos .info:after {
     display: none;
+  }
+  #a-propos .info div {
+    display: flex;
   }
 }
 @media screen and (max-width: 460px) {
@@ -704,9 +807,9 @@ i + i {
   margin-top: 2rem;
 }
 #abstract h2 {
-  padding-bottom: 0.6rem;
   font-size: 4rem;
   margin-left: 12rem;
+  padding: 0.6rem 0 0.6rem 0;
   text-shadow: 0 6px 0 black;
 }
 #abstract .hobby {
@@ -731,6 +834,7 @@ i + i {
   flex-direction: column;
 }
 #abstract .hobby i p {
+  hyphens: auto;
   text-align: end;
 }
 #abstract .langages {
@@ -738,10 +842,15 @@ i + i {
   margin-bottom: 1rem;
 }
 #abstract .langages h3 {
+  font-size: 1.75rem;
+  color: #ebb455;
   position: relative;
-  padding-bottom: 0.6rem;
-  margin-bottom: 0.4rem;
+  padding-bottom: 0.6rem !important;
+  margin-bottom: 0.4rem !important;
   width: fit-content;
+}
+#abstract .langages h3:hover {
+  cursor: default;
 }
 #abstract .langages h3:hover:after {
   content: "";
@@ -754,7 +863,7 @@ i + i {
   bottom: 0;
   left: 0;
   height: 2px;
-  width: 100px;
+  width: 20%;
   background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
   transition: width 0.4s ease-in-out;
 }
@@ -1138,24 +1247,29 @@ i + i {
 #abstract .education {
   grid-column: 4/8;
 }
-#abstract .education h3 {
+#abstract .education h3, #abstract .experience h3 {
+  font-size: 1.75rem;
+  color: #ebb455;
   position: relative;
-  padding-bottom: 0.6rem;
-  margin-bottom: 0.4rem;
+  padding-bottom: 0.6rem !important;
+  margin-bottom: 0.4rem !important;
   width: fit-content;
 }
-#abstract .education h3:hover:after {
+#abstract .education h3:hover, #abstract .experience h3:hover {
+  cursor: default;
+}
+#abstract .education h3:hover:after, #abstract .experience h3:hover:after {
   content: "";
   position: absolute;
   width: 100%;
 }
-#abstract .education h3:after {
+#abstract .education h3:after, #abstract .experience h3:after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   height: 2px;
-  width: 100px;
+  width: 20%;
   background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
   transition: width 0.4s ease-in-out;
 }
@@ -1176,27 +1290,6 @@ i + i {
 }
 #abstract .experience {
   grid-column: 9/13;
-}
-#abstract .experience h3 {
-  position: relative;
-  padding-bottom: 0.6rem;
-  margin-bottom: 0.4rem;
-  width: fit-content;
-}
-#abstract .experience h3:hover:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-}
-#abstract .experience h3:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 100px;
-  background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-  transition: width 0.4s ease-in-out;
 }
 @media screen and (min-width: 2500px) {
   #abstract .hobby {
@@ -1244,9 +1337,9 @@ i + i {
    Section projets:
    ========================================================================== */
 #projects h2 {
-  padding-bottom: 0.6rem;
   font-size: 4rem;
   margin-left: 12rem;
+  padding: 0.6rem 0 0.6rem 0;
   text-shadow: 0 6px 0 black;
 }
 #projects ul {
@@ -1265,10 +1358,15 @@ i + i {
   padding: 0;
 }
 #projects ul li h3 {
+  font-size: 1.75rem;
+  color: #ebb455;
   position: relative;
-  padding-bottom: 0.6rem;
-  margin-bottom: 0.4rem;
+  padding-bottom: 0.6rem !important;
+  margin-bottom: 0.4rem !important;
   width: fit-content;
+}
+#projects ul li h3:hover {
+  cursor: default;
 }
 #projects ul li h3:hover:after {
   content: "";
@@ -1281,7 +1379,7 @@ i + i {
   bottom: 0;
   left: 0;
   height: 2px;
-  width: 100px;
+  width: 20%;
   background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
   transition: width 0.4s ease-in-out;
 }
@@ -1301,9 +1399,13 @@ i + i {
   background-color: #e43397;
   border-radius: 20px;
   padding: 0.2rem;
+  text-align: center;
 }
 #projects ul li p + p {
   margin-top: 0.4rem;
+}
+#projects ul li article {
+  color: var(--color-white);
 }
 @media screen and (max-width: 460px) {
   #projects h2 {
@@ -1319,6 +1421,36 @@ i + i {
 }
 
 /* ==========================================================================
+   CV:
+   ========================================================================== */
+#p-cv h3 {
+  font-size: 1.75rem;
+  color: #ebb455;
+  position: relative;
+  padding-bottom: 0.6rem !important;
+  margin-bottom: 0.4rem !important;
+  width: fit-content;
+}
+#p-cv h3:hover {
+  cursor: default;
+}
+#p-cv h3:hover:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+}
+#p-cv h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 20%;
+  background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
+  transition: width 0.4s ease-in-out;
+}
+
+/* ==========================================================================
    Section CV:
    ========================================================================== */
 #cv {
@@ -1326,38 +1458,39 @@ i + i {
 }
 
 /* ==========================================================================
-   CV:
-   ========================================================================== */
-#p-cv .title h2 {
-  position: relative;
-  padding-bottom: 0.6rem;
-}
-#p-cv .title h2:hover:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100px;
-  height: 2px;
-  background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-  transition: width 0.4s ease-in-out;
-}
-#p-cv .title h2:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-  transition: width 0.4s ease-in-out;
-}
-
-/* ==========================================================================
    À propos:
    ========================================================================== */
-#p-propos article:first-child {
+#p-propos article {
   margin-bottom: 2rem;
+}
+#p-propos article:last-child {
+  margin-bottom: 0;
+}
+#p-propos article h3 {
+  font-size: 1.75rem;
+  color: #ebb455;
+  position: relative;
+  padding-bottom: 0.6rem !important;
+  margin-bottom: 0.4rem !important;
+  width: fit-content;
+}
+#p-propos article h3:hover {
+  cursor: default;
+}
+#p-propos article h3:hover:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+}
+#p-propos article h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 20%;
+  background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
+  transition: width 0.4s ease-in-out;
 }
 #p-propos article h5 {
   margin-bottom: 0.4rem;
@@ -1368,38 +1501,195 @@ i + i {
 #p-propos article p + h5 {
   margin-top: 1rem;
 }
-#p-propos #qui-suis-je .title h2, #p-propos #travail .title h2 {
+
+/* ==========================================================================
+   SETUP:
+   ========================================================================== */
+#p-setup {
+  /* ==========================================================================
+       Section résumé:
+  ========================================================================== */
+  /* ==========================================================================
+        Section Images:
+  ========================================================================== */
+}
+#p-setup #summary h2 {
+  font-size: 4rem;
+  margin-left: 12rem;
+  padding: 0.6rem 0 0.6rem 0;
+  text-shadow: 0 6px 0 black;
+}
+#p-setup #summary article {
+  padding: 2rem 0 2rem 0;
+}
+#p-setup #summary article:last-child {
+  margin-bottom: 0;
+}
+#p-setup #summary article h3 {
+  font-size: 1.75rem;
+  color: #ebb455;
   position: relative;
-  padding-bottom: 0.6rem;
+  padding-bottom: 0.6rem !important;
+  margin-bottom: 0.4rem !important;
   width: fit-content;
 }
-#p-propos #qui-suis-je .title h2:after, #p-propos #travail .title h2:after {
+#p-setup #summary article h3:hover {
+  cursor: default;
+}
+#p-setup #summary article h3:hover:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+}
+#p-setup #summary article h3:after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100px;
   height: 2px;
+  width: 20%;
   background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
   transition: width 0.4s ease-in-out;
 }
-#p-propos #qui-suis-je .title h2:hover:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
+#p-setup #summary article h5 {
+  margin-bottom: 0.4rem;
 }
-#p-propos #travail .title h2:hover:after {
-  content: "";
+#p-setup #summary article p {
+  text-align: justify;
+}
+#p-setup #summary article p + h5 {
+  margin-top: 1rem;
+}
+#p-setup #summary article#comment-ai-je-fait-pour-avoir-un-tel-setup .text-right-part {
+  grid-column: 4/13;
+  grid-row: 1;
+}
+#p-setup #summary article#comment-ai-je-fait-pour-avoir-un-tel-setup img {
+  title: url("../img/Setup 2023.webp");
+  grid-column: 1/4;
+  grid-row: 1;
+}
+#p-setup #summary article#pourquoi-ce-matériel {
+  background-color: var(--color-contrast-lower);
+}
+#p-setup #summary article#pourquoi-ce-matériel .text-left-part {
+  grid-column: 1/10;
+  grid-row: 1;
+}
+#p-setup #summary article#pourquoi-ce-matériel img {
+  grid-column: 10/13;
+  grid-row: 1;
+}
+#p-setup #summary article#est-il-voué-à-évoluer .text-right-part {
+  grid-column: 4/13;
+  grid-row: 1;
+}
+#p-setup #summary article#est-il-voué-à-évoluer img {
+  grid-column: 1/4;
+  grid-row: 1;
+}
+@media screen and (min-width: 2500px) {
+  #p-setup #summary article#comment-ai-je-fait-pour-avoir-un-tel-setup .text-right-part, #p-setup #summary article#est-il-voué-à-évoluer .text-right-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #p-setup #summary article#pourquoi-ce-matériel .text-left-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 960px) {
+  #p-setup #summary .info {
+    width: max-content;
+  }
+  #p-setup #summary .info:after {
+    display: none;
+  }
+  #p-setup #summary .info div {
+    display: flex;
+  }
+}
+@media screen and (max-width: 460px) {
+  #p-setup #summary h2 {
+    margin-left: 0;
+  }
+  #p-setup #summary article#comment-ai-je-fait-pour-avoir-un-tel-setup .container .wrapper img, #p-setup #summary article#pourquoi-ce-matériel .container .wrapper img, #p-setup #summary article#est-il-voué-à-évoluer .container .wrapper img {
+    height: max-content;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+#p-setup #pictures {
+  background-color: var(--color-contrast-lower);
+  /* ==========================================================================
+      Responsive:
+  ========================================================================== */
+}
+#p-setup #pictures h2 {
+  font-size: 4rem;
+  margin-left: 12rem;
+  padding: 0.6rem 0 0.6rem 0;
+  text-shadow: 0 6px 0 black;
+}
+#p-setup #pictures .container {
+  display: flex;
+  flex-direction: column;
+}
+#p-setup #pictures .container .img-setup {
+  text-align: center;
+}
+#p-setup #pictures .container .img-setup img {
+  width: 25%;
+  height: fit-content;
+  padding: 10px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+#p-setup #pictures .container .img-setup img:hover {
+  opacity: 1;
+}
+#p-setup #pictures .container .img-setup-expanted {
+  position: relative;
+}
+#p-setup #pictures .container .img-setup-expanted .closebtn {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+#p-setup #pictures .container .img-setup-expanted #expandedImg {
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
+}
+#p-setup #pictures .container .img-setup-expanted #imgtext {
+  background: rgba(16, 15, 15, 0.6);
+  border-radius: 20px;
+  position: absolute;
+  font-size: 20px;
+  padding: 0.6rem;
+  bottom: 15px;
+  color: white;
+  left: 15px;
+}
+@media screen and (max-width: 960px) {
+  #p-setup #pictures .info {
+    width: max-content;
+  }
+  #p-setup #pictures .info:after {
+    display: none;
+  }
+  #p-setup #pictures .info div {
+    display: flex;
+  }
+}
+@media screen and (max-width: 460px) {
+  #p-setup #pictures h2 {
+    margin-left: 0;
+  }
 }
 
 /* ==========================================================================
@@ -1415,21 +1705,94 @@ i + i {
 }
 #p-contact #contact-form form button {
   color: white;
-  background-color: #9c0818;
+  background-color: #708AD4;
   margin-top: 0.6rem;
 }
 #p-contact #contact-form form button:hover {
   color: #212529;
   border-color: white;
 }
-
-.banner, .banner-icon {
+#p-contact #contact-form h2 {
+  font-size: 4rem;
+  text-shadow: 0 6px 0 black;
+}
+#p-contact #contact-form p {
+  color: rgb(62, 62, 65);
+  padding-bottom: 0.6rem;
+}
+#p-contact #contact-form .card {
+  width: 100%;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+#p-contact #contact-form .card h3 {
+  margin-bottom: 2rem;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+#p-contact #contact-form .card .user-box {
+  position: relative;
+}
+#p-contact #contact-form .card .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+#p-contact #contact-form .card .user-box input:focus ~ label, #p-contact #contact-form .card .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #708AD4;
+  font-size: 12px;
+}
+#p-contact #contact-form .card .user-box input .form-control:focus {
+  border-color: transparent !important;
+}
+#p-contact #contact-form .card .user-box textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+#p-contact #contact-form .card .user-box textarea:focus ~ label, #p-contact #contact-form .card .user-box textarea:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #708AD4;
+  font-size: 12px;
+}
+#p-contact #contact-form .card .user-box textarea .form-control:focus {
+  border-color: transparent !important;
+}
+#p-contact #contact-form .card .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+#p-contact #contact-infos .banner, #p-contact #contact-infos .banner-icon {
   align-items: center;
   display: flex;
 }
-
-.banner {
-  background-color: #9c0818;
+#p-contact #contact-infos .banner {
+  background-color: #708AD4;
   border-radius: 0.3rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   margin: 0 0 1rem;
@@ -1438,8 +1801,7 @@ i + i {
   padding: 9px 0;
   position: relative;
 }
-
-.banner-icon {
+#p-contact #contact-infos .banner .banner-icon {
   background-color: #111114;
   border-bottom-left-radius: 0.3rem;
   border-top-left-radius: 0.3rem;
@@ -1450,7 +1812,7 @@ i + i {
   top: 0;
   width: 66px;
 }
-.banner-icon:before {
+#p-contact #contact-infos .banner .banner-icon:before {
   border-bottom: 5px solid transparent;
   border-left: 10px solid #111114;
   border-right: 0 solid transparent;
@@ -1465,8 +1827,7 @@ i + i {
   transform: translateY(-50%);
   width: 0;
 }
-
-.banner-title {
+#p-contact #contact-infos .banner .banner-title {
   align-items: center;
   display: flex;
   font-size: 26px;
@@ -1475,27 +1836,116 @@ i + i {
   text-shadow: 3px 3px 4px var(--color-contrast-low);
   width: 100%;
 }
+#p-contact #contact-infos .banner .banner-title h3 {
+  font-size: 1.75rem;
+  color: #ebb455;
+  position: relative;
+  padding-bottom: 0.6rem !important;
+  margin-bottom: 0.4rem !important;
+  width: fit-content;
+}
+#p-contact #contact-infos .banner .banner-title h3:hover {
+  cursor: default;
+}
+#p-contact #contact-infos .banner .banner-title h3:hover:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+}
+#p-contact #contact-infos .banner .banner-title h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 20%;
+  background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
+  transition: width 0.4s ease-in-out;
+}
 
 /* ==========================================================================
    Discord:
    ========================================================================== */
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: transparent;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+#discord_widget.card {
+  width: 100%;
+  background: transparent;
+  box-sizing: border-box;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
 }
-
-.card-header {
-  padding: 0.75rem 1.25rem;
+#discord_widget .card-header {
   margin-bottom: 0.4rem;
-  background-color: var(--color-contrast-lower);
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+#discord_widget .card-header h5 {
+  display: flex;
+  align-items: center;
+}
+#discord_widget .card-header h5 i {
+  display: flex;
+  align-items: center;
+  margin-right: 0.6rem;
+}
+#discord_widget [data-widget=kelens_discord_widget] .kelens-content {
+  padding: 15px;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+}
+#discord_widget [data-widget=kelens_discord_widget] .kelens-content .kelens-Discordusers {
+  height: 200px;
+  overflow: auto;
+}
+#discord_widget [data-widget=kelens_discord_widget] .kelens-content .kelens-discordUser {
+  align-items: center;
+  display: flex;
+  padding: 5px;
+}
+#discord_widget [data-widget=kelens_discord_widget] .kelens-content .kelens-userImg {
+  background: rgba(0, 0, 0, 0.149) no-repeat 50%/cover;
+  border-radius: 5px;
+  display: inline-block;
+  height: 20px;
+  margin-right: 10px;
+  position: relative;
+  width: 20px;
+}
+#discord_widget [data-widget=kelens_discord_widget] .kelens-content .kelens-status-dnd {
+  background: var(--color-error);
+}
+#discord_widget [data-widget=kelens_discord_widget] .kelens-content .kelens-status-online {
+  background: var(--color-success);
+}
+#discord_widget [data-widget=kelens_discord_widget] .kelens-content .kelens-userStatus {
+  border-radius: 50%;
+  display: block;
+  height: 8px;
+  left: auto;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  width: 8px;
+}
+#discord_widget [data-widget=kelens_discord_widget] .kelens-content .kelens-username {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+#discord_widget [data-widget=kelens_discord_widget] .kelens-content .kelens-Discordinfo {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+#discord_widget [data-widget=kelens_discord_widget] .kelens-content .kelens-js--Discordcount {
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -1509,28 +1959,43 @@ i + i {
   font-size: 4rem;
   text-shadow: 0 6px 0 black;
 }
-#p-mentions-legales .title h3 {
+#p-mentions-legales .title h2 {
+  color: var(--color-accent);
   text-align: center;
+  text-shadow: 0 6px 0 black;
 }
-#p-mentions-legales h2 {
-  position: relative;
-  padding-bottom: 0.6rem;
-  margin-bottom: 0.4rem;
+#p-mentions-legales h3 {
+  font-size: 1.75rem;
   color: #ebb455;
+  position: relative;
+  padding-bottom: 0.6rem !important;
+  margin-bottom: 0.4rem !important;
+  width: fit-content;
 }
-#p-mentions-legales h2:after {
+#p-mentions-legales h3:hover {
+  cursor: default;
+}
+#p-mentions-legales h3:hover:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+}
+#p-mentions-legales h3:after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100px;
   height: 2px;
+  width: 20%;
   background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
   transition: width 0.4s ease-in-out;
 }
 #p-mentions-legales p {
   text-align: justify;
   padding-bottom: 0.6rem;
+}
+#p-mentions-legales p:last-child {
+  padding-bottom: 0;
 }
 
 /* ==========================================================================

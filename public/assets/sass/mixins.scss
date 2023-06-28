@@ -8,4 +8,48 @@
     }
 }
 
+@mixin h2 {
+    h2 {
+        font-size: 4rem;
+        margin-left: 12rem;
+        padding: .6rem 0 .6rem 0;
+        text-shadow: 0 6px 0 black;
+    }
+}
 
+@mixin h2-mobile {
+    h2 {
+        margin-left: 0;
+    }
+}
+
+@mixin h3 {
+    h3 {
+        font-size: 1.75rem;
+        color: #ebb455;
+        position: relative;
+        padding-bottom: .6rem !important;
+        margin-bottom: .4rem !important;
+        width: fit-content;
+
+        &:hover {
+            cursor: default;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 20%;
+            background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
+            transition: width 0.4s ease-in-out;
+        }
+    }
+}

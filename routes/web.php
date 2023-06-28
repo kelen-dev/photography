@@ -35,6 +35,10 @@ Route::get('/mentions-legales', function () {
     return view('/p/mentions-legales');
 })->name('mentions-legales');
 
+Route::get('/setup', function () {
+    return view('/p/setup');
+})->name('setup');
+
 Route::prefix('contact')->name('contact.')->group(function () {
     Route::get('/', [ContactsController::class, 'create'])->name('index');
     Route::post('/', [ContactsController::class, 'store'])->name('index');

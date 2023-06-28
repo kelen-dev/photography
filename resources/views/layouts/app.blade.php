@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="sr">
 
 <head>
     <meta charset="utf-8">
@@ -23,19 +23,19 @@
     <title>@yield('title') | Sean Segura</title>
 
     {{-- Favicon --}}
-    <link rel="shortcut icon" href="{{ asset('assets/img/Logo.webp') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.webp') }}">
 
     {{-- Fonts --}}
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" defer>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css">
 
     {{-- Page level scripts --}}
     @stack('scripts')
 
     {{-- Scripts --}}
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js" defer></script>
+    <script src="https://www.unpkg.com/browse/jquery@3.7.0/dist/jquery.min.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js" defer></script>
     <script src="{{ asset('assets/vendor/axios/axios.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/css-vars-ponyfill.min.js') }}" defer></script>
     <script>
@@ -54,10 +54,13 @@
     <script src="{{ asset('assets/js/theme_button.js') }}" defer></script>
     <script src="{{ asset('assets/js/button.js') }}" defer></script>
     <script src="{{ asset('assets/js/navbar.js') }}" defer></script>
+    <script src="{{ asset('assets/js/setup.js') }}" defer></script>
+    <script src="{{ asset('assets/js/discord-widget.js') }}" defer></script>
+    <script src="{{ asset('assets/js/scrollreveal.js') }}" defer></script>
 
     {{-- Bootstrap --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous" defer></script>
+    <link href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
     {{-- Styles --}}
     <link href="{{ asset('assets/css/scrollbar.css') }}" rel="stylesheet">
@@ -82,11 +85,20 @@
         @include('elements.navbar')
     </header>
 
-    <main>
+    <main class="content">
         @yield('content')
+        @if(Route::is('home', 'cv'))
+            {{-- Download CV --}}
+            <section id="cv">
+                <a href="{{ asset('assets/pdf/cv.pdf') }}" target="_blank" class="btn btn-principal">
+                    Télécharger le CV
+                </a>
+            </section>
+        @else
+        @endif
     </main>
 
-    <footer class="footer @if(Route::is('contact.index', 'a-propos')) fixed-footer @endif">
+    <footer class="footer @if(Route::is('contact.index', 'mentions-legales')) fixed-footer @endif">
         @include('elements.footer')
     </footer>
 </div>

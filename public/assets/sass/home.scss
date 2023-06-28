@@ -4,12 +4,7 @@
    Section à propos:
    ========================================================================== */
 #a-propos {
-    h2 {
-        padding-bottom: 0.6rem;
-        font-size: 4rem;
-        margin-left: 12rem;
-        text-shadow: 0 6px 0 black;
-    }
+    @include h2;
 
     .info {
         position: relative;
@@ -43,7 +38,7 @@
                 margin-bottom: 0;
             }
 
-            h3 {
+            h4 {
                 color: var(--color-title-propos);
                 margin-right: .2rem;
                 font-size: 1rem;
@@ -71,6 +66,8 @@
         grid-column: 4 / 13;
         grid-row: 2;
 
+        @include h3;
+
         blockquote {
             padding: 0 0 0 2rem;
 
@@ -97,36 +94,13 @@
     }
 
     .social-media-links {
-        grid-column: 4 / 8;
+        grid-column: 4 / 13;
         grid-row: 3;
         overflow: hidden;
         padding-bottom: 4px;
         width: 100%;
 
-        h3 {
-            position: relative;
-            padding-bottom: 0.6rem;
-            width: fit-content;
-
-            &:hover {
-                &:after {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                }
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                height: 2px;
-                width: 100px;
-                background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-                transition: width 0.4s ease-in-out;
-            }
-        }
+        @include h3;
 
         ul {
             margin: 0;
@@ -185,8 +159,14 @@
 
     @media screen and (max-width: 960px) {
         .info {
+            width: max-content;
+
             &:after {
                 display: none;
+            }
+
+            div {
+                display: flex;
             }
         }
     }
@@ -233,12 +213,7 @@
         }
     }
 
-    h2 {
-        padding-bottom: 0.6rem;
-        font-size: 4rem;
-        margin-left: 12rem;
-        text-shadow: 0 6px 0 black;
-    }
+    @include h2;
 
     .hobby {
         position: relative;
@@ -263,6 +238,7 @@
             flex-direction: column;
 
             p {
+                hyphens: auto;
                 text-align: end;
             }
         }
@@ -272,31 +248,7 @@
         grid-column: 4 / 13;
         margin-bottom: 1rem;
 
-        h3 {
-            position: relative;
-            padding-bottom: .6rem;
-            margin-bottom: .4rem;
-            width: fit-content;
-
-            &:hover {
-                &:after {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                }
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                height: 2px;
-                width: 100px;
-                background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-                transition: width 0.4s ease-in-out;
-            }
-        }
+        @include h3;
 
         ul {
             margin: 0;
@@ -385,35 +337,11 @@
 
     .education {
         grid-column: 4 / 8;
-
-        h3 {
-            position: relative;
-            padding-bottom: .6rem;
-            margin-bottom: .4rem;
-            width: fit-content;
-
-            &:hover {
-                &:after {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                }
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                height: 2px;
-                width: 100px;
-                background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-                transition: width 0.4s ease-in-out;
-            }
-        }
     }
 
     .education, .experience {
+        @include h3;
+
         .date {
             color: var(--color-accent);
             font-size: 1.2rem;
@@ -435,32 +363,6 @@
 
     .experience {
         grid-column: 9 / 13;
-
-        h3 {
-            position: relative;
-            padding-bottom: .6rem;
-            margin-bottom: .4rem;
-            width: fit-content;
-
-            &:hover {
-                &:after {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                }
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                height: 2px;
-                width: 100px;
-                background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-                transition: width 0.4s ease-in-out;
-            }
-        }
     }
 
 
@@ -517,12 +419,7 @@
    Section projets:
    ========================================================================== */
 #projects {
-    h2 {
-        padding-bottom: .6rem;
-        font-size: 4rem;
-        margin-left: 12rem;
-        text-shadow: 0 6px 0 black;
-    }
+    @include h2;
 
     ul {
         margin: 0;
@@ -540,35 +437,12 @@
                 padding: 0;
             }
 
-            h3 {
-                position: relative;
-                padding-bottom: .6rem;
-                margin-bottom: .4rem;
-                width: fit-content;
-
-                &:hover {
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        width: 100%;
-                    }
-                }
-
-                &:after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    height: 2px;
-                    width: 100px;
-                    background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-                    transition: width 0.4s ease-in-out;
-                }
-            }
+            @include h3;
 
             .skills-project {
                 display: flex;
                 margin-bottom: .4rem;
+
                 li {
                     margin-right: .4rem;
                     padding: 0;
@@ -576,11 +450,13 @@
                     &:last-child {
                         margin: 0;
                     }
+
                     span {
                         color: var(--color-white);
                         background-color: #e43397;
                         border-radius: 20px;
                         padding: .2rem;
+                        text-align: center;
                     }
                 }
             }
@@ -589,6 +465,10 @@
                 p {
                     margin-top: .4rem;
                 }
+            }
+
+            article {
+                color: var(--color-white);
             }
         }
     }
@@ -606,11 +486,4 @@
             }
         }
     }
-}
-
-/* ==========================================================================
-   Section CV:
-   ========================================================================== */
-#cv {
-    text-align: center;
 }

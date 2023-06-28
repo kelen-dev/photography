@@ -10,33 +10,50 @@
                     <h2>
                         Entrer en contact
                     </h2>
+
                     <p>
-                        si vous rencontrez des problèmes avec ce service,<a href="mailto:{{ config('kelens.admin_support_email') }}"> veuillez demander de l'aide.</a>
+                        si vous rencontrez des problèmes avec ce service,
+                        <a href="mailto:{{ config('kelens.admin_support_email') }}">
+                            veuillez demander de l'aide.
+                        </a>
                     </p>
 
-                    <form action="{{ route('contact.index') }}" method="POST">
-                        @csrf
-                        <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
-                            <label for="name" class="control-label">Nom</label>
-                            <input type="text" name="name" id="name" class="form-control" required="required" value="{{ old('name') }}">
-                            {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
-                        </div>
+                    <div class="card mb-5">
+                        <form method="POST" action="{{ route('contact.index') }}">
+                            @csrf
+                            <div class="user-box {{ $errors->has('name') ? 'has-error' : '' }}">
+                                <input type="text" name="name" id="name" class="form-control" required="required"
+                                       value="{{ old('name') }}">
+                                {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
+                                <label for="name">
+                                    Nom
+                                </label>
+                            </div>
 
-                        <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-                            <label for="email" class="control-label">Adresse mail</label>
-                            <input type="email" name="email" id="email" class="form-control" required="required" value="{{ old('email') }}">
-                            {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
-                        </div>
+                            <div class="user-box {{ $errors->has('email') ? 'has-error' : '' }}">
+                                <input type="email" name="email" id="email" class="form-control" required="required"
+                                       value="{{ old('email') }}">
+                                {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
+                                <label for="email">
+                                    Adresse mail
+                                </label>
+                            </div>
 
-                        <div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
-                            <label for="text" class="control-label sr-only">Message</label>
-                            <textarea class="form-control" rows="10" cols="10" name="message" id="message"
-                                      required="required">{{ old('message') }}</textarea>
-                            {!! $errors->first('message', '<span class="help-block">:message</span>') !!}
-                        </div>
+                            <div class="user-box {{ $errors->has('message') ? 'has-error' : '' }}">
+                                <textarea type="message" name="message" id="message" class="form-control" required="required">
+                                    {{ old('message') }}
+                                </textarea>
+                                {!! $errors->first('message', '<span class="help-block">:message</span>') !!}
+                                <label for="text">
+                                    Message
+                                </label>
+                            </div>
 
-                        <button class="btn" type="submit">Envoyer</button>
-                    </form>
+                            <button class="btn btn-principal" type="submit">
+                                Envoyer
+                            </button>
+                        </form>
+                    </div>
                 </section>
             </div>
 
@@ -47,10 +64,12 @@
                             <i class="bi bi-info-lg bi-2X"></i>
                         </div>
                         <div class="banner-title">
-                            <h2 class="h3">INFORMATIONS</h2>
+                            <h3>
+                                INFORMATIONS
+                            </h3>
                         </div>
                     </div>
-                    <div class="card" id="discord_widget">
+                    <div id="discord_widget" class="card">
                         <div class="card-header">
                             <h5>
                                 <i class="bi bi-discord bi-2X"></i>
@@ -59,10 +78,10 @@
                         </div>
                         <div class="kelens-widget kelens-block" data-widget="kelens_discord_widget">
                             <div class="kelens-content">
-                                <div class="kelens-usersDiscord"></div>
-                                <div class="kelens-discordInfo">
-                                    <span class="kelens-js--discordCount"></span>
-                                    <a href="https://discord.kelens.fr" target="_blank" class="btn btn-primary btn-grad">
+                                <p class="kelens-Discordusers"></p>
+                                <div class="kelens-Discordinfo">
+                                    <span class="kelens-js--Discordcount"></span>
+                                    <a href="https://discord.kelens.fr" target="_blank" class="btn btn-principal">
                                         Rejoindre
                                     </a>
                                 </div>
@@ -73,43 +92,4 @@
             </div>
         </div>
     </div>
-
-    <script defer>
-        window.addEventListener("DOMContentLoaded", (event) => {
-
-            // COMPTEUR DISCORD
-            var discord_key = "766660674453110814";
-            if ($('.kelens--js-discordCount').length && discord_key.length) {
-                {{-- Si erreur --}}
-                    window.onerror = function (msg, url, ln) {
-                    return (msg === "Impossible de trouver la classe du compteur discord.");
-                };
-
-                {{-- Affiche du compte --}}
-                $.get('https://discordapp.com/api/guilds/' + discord_key + '/embed.json', function (d) {
-                    $('.kelens--js-discordCount').html(d.presence_count + " en ligne");
-                });
-            }
-
-            // WIDGET DISCORD
-            if ($('.kelens-js--discordCount').length && discord_key.length) {
-                window.onerror = function (msg, url, ln) {
-                    return (msg === "Impossible de trouver la classe.");
-                };
-                $.get('https://discordapp.com/api/guilds/' + discord_key + '/embed.json', function (d) {
-                    $('.kelens-js--discordCount').html(d.presence_count + " en ligne");
-                    d.members.forEach(function (mem) {
-                        $('.kelens-widget[data-widget="kelens_discord_widget"] .kelens-content .kelens-usersDiscord')
-                            .append(`
-                        <div class="kelens-discordUser">
-                            <div class="kelens-userImg" style="background-image:url(${mem.avatar_url})">
-                                <div class="kelens-userStatus kelens-status-${mem.status}"></div>
-                            </div>
-                            <div class="kelens-username">${mem.username}</div>
-                        </div>`);
-                    });
-                });
-            }
-        })
-    </script>
 @endsection

@@ -150,57 +150,6 @@ img, svg, video {
     border-right-color: transparent
 }
 
-#button {
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    bottom: 200px;
-    right: 0;
-    text-align: center;
-    color: #fff;
-    line-height: 46px;
-    display: inline-block;
-    transition: opacity .5s, visibility .5s;
-    z-index: 1000;
-    transform: rotate(-90deg) translate(-50%, 0);
-}
-
-#button:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    z-index: -1;
-    height: 2px;
-    border-radius: 10px;
-    transform: scaleX(0);
-    transition: transform .6s;
-    transform-origin: 100% 0;
-    background: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
-}
-
-#button:hover {
-    cursor: pointer;
-}
-
-#button:hover:after {
-    transform: scaleX(1);
-    transform-origin: left
-}
-
-#button.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-@media (min-width: 500px) {
-    #button {
-        margin: 30px;
-    }
-}
-
 
 /* ==========================================================================
    Style pages:

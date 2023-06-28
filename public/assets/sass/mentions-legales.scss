@@ -1,3 +1,5 @@
+@import "mixins";
+
 #p-mentions-legales {
     .title {
         padding-bottom: 2rem;
@@ -8,31 +10,21 @@
             text-shadow: 0 6px 0 black;
         }
 
-        h3 {
+        h2 {
+            color: var(--color-accent);
             text-align: center;
+            text-shadow: 0 6px 0 black;
         }
     }
 
-    h2 {
-        position: relative;
-        padding-bottom: 0.6rem;
-        margin-bottom: 0.4rem;
-        color: #ebb455;
-
-        &:after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100px;
-            height: 2px;
-            background: linear-gradient(90deg, #D0368A 0%, #708AD4 99%);
-            transition: width .4s ease-in-out;
-        }
-    }
+    @include h3;
 
     p {
         text-align: justify;
         padding-bottom: 0.6rem;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
     }
 }

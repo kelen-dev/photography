@@ -1,0 +1,206 @@
+@import "mixins";
+
+#p-setup {
+    /* ==========================================================================
+        Section résumé:
+   ========================================================================== */
+    #summary {
+        @include h2;
+
+        article {
+            padding: 2rem 0 2rem 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include h3;
+
+            h5 {
+                margin-bottom: .4rem;
+            }
+
+            p {
+                text-align: justify;
+
+                + h5 {
+                    margin-top: 1rem;
+                }
+            }
+
+            &#comment-ai-je-fait-pour-avoir-un-tel-setup {
+                .text-right-part {
+                    grid-column: 4 / 13;
+                    grid-row: 1;
+                }
+
+                img {
+                    title: url("../img/Setup 2023.webp");
+                    grid-column: 1 / 4;
+                    grid-row: 1;
+                }
+            }
+
+            &#pourquoi-ce-matériel {
+                background-color: var(--color-contrast-lower);
+
+                .text-left-part {
+                    grid-column: 1 / 10;
+                    grid-row: 1;
+                }
+
+                img {
+                    grid-column: 10 / 13;
+                    grid-row: 1;
+                }
+            }
+
+            &#est-il-voué-à-évoluer {
+                .text-right-part {
+                    grid-column: 4 / 13;
+                    grid-row: 1;
+                }
+
+                img {
+                    grid-column: 1 / 4;
+                    grid-row: 1;
+                }
+            }
+        }
+
+        @media screen and (min-width: 2500px) {
+            article {
+                &#comment-ai-je-fait-pour-avoir-un-tel-setup, &#est-il-voué-à-évoluer {
+                    .text-right-part {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                }
+
+                &#pourquoi-ce-matériel {
+                    .text-left-part {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 960px) {
+            .info {
+                width: max-content;
+
+                &:after {
+                    display: none;
+                }
+
+                div {
+                    display: flex;
+                }
+            }
+        }
+
+        @media screen and (max-width: 460px) {
+            @include h2-mobile;
+
+            article {
+                &#comment-ai-je-fait-pour-avoir-un-tel-setup, &#pourquoi-ce-matériel, &#est-il-voué-à-évoluer {
+                    .container {
+                        .wrapper {
+                            img {
+                                height: max-content;
+                                display: table-cell;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ==========================================================================
+          Section Images:
+    ========================================================================== */
+    #pictures {
+        background-color: var(--color-contrast-lower);
+        @include h2;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+
+            .img-setup {
+                text-align: center;
+
+                img {
+                    width: 25%;
+                    height: fit-content;
+                    padding: 10px;
+                    opacity: 0.8;
+                    cursor: pointer;
+                    transition: ease-in-out .2s;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .img-setup-expanted {
+                position: relative;
+
+                .closebtn {
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    color: white;
+                    font-size: 35px;
+                    cursor: pointer;
+                }
+
+                #expandedImg {
+                    width: 100%;
+                }
+
+                #imgtext {
+                    background: rgba(16, 15, 15, 0.6);
+                    border-radius: 20px;
+                    position: absolute;
+                    font-size: 20px;
+                    padding: .6rem;
+                    bottom: 15px;
+                    color: white;
+                    left: 15px;
+                }
+            }
+        }
+
+        /* ==========================================================================
+            Responsive:
+        ========================================================================== */
+        @media screen and (min-width: 2500px) {
+
+        }
+
+        @media screen and (max-width: 960px) {
+            .info {
+                width: max-content;
+
+                &:after {
+                    display: none;
+                }
+
+                div {
+                    display: flex;
+                }
+            }
+        }
+
+        @media screen and (max-width: 460px) {
+            @include h2-mobile;
+        }
+    }
+}
