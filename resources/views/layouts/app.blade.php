@@ -51,7 +51,6 @@
         });
     </script>
     <script src="{{ asset('assets/js/app.js') }}" defer></script>
-    <script src="{{ asset('assets/js/theme_button.js') }}" defer></script>
     <script src="{{ asset('assets/js/button.js') }}" defer></script>
     <script src="{{ asset('assets/js/navbar.js') }}" defer></script>
     <script src="{{ asset('assets/js/setup.js') }}" defer></script>

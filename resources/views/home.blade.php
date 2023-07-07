@@ -23,7 +23,7 @@
                             Nom :
                         </h4>
                         <p>
-                            Sean SEGURA
+                        {{ config('kelens.Info.name') }}
                         </p>
                     </div>
                     <div id="age load-hidden">
@@ -95,7 +95,7 @@
                         méritez le respect et l'amour de ceux qui vous entourent ~
                     </blockquote>
                     <cite>
-                        Sean SEGURA
+                        {{ config('kelens.Info.name') }}
                     </cite>
                 </div>
 
@@ -394,7 +394,7 @@
             <ul class="wrapper">
                 <li>
                     <h3>
-                        La Fun Attitude
+                        Hydaria
                     </h3>
                     <ul class="skills-project">
                         <li>
@@ -422,11 +422,11 @@
                         </li>
                     </ul>
                     <p>
-                        La Fun Attitude est une future plateforme multigaming fondée par Keta et moi-même.
+                        Hydaria est une future plateforme multigaming fondée par Enzo Zanitchi et moi-même.
                     </p>
                     <p>
                         Nous voulons être une grande famille où règne un état d’esprit soudé et convivial !
-                        N’attends plus et rejoins nous ! La Fun Attitude est une team et communauté multigaming,
+                        N’attends plus et rejoins nous ! Hydaria est une team et communauté multigaming,
                         MOBA, MMORPG, FPS…
                         <br>
                         Nous avons pour but de réunir des joueurs passionnés avec le même état d’esprit que le notre
@@ -434,10 +434,10 @@
                         nous.
                         <br>
                         Tout est mis en œuvre pour que nos membres puissent trouver une structure organisée et
-                        complète. Nous souhaitons que la Fun Attitude soit reconnue comme une team ambitieuse
+                        complète. Nous souhaitons que Hydaria soit reconnue comme une team ambitieuse
                         respectant ses valeurs.
                         <br>
-                        Tous les types de profils sont acceptés sur la Fun Attitude, que vous soyez dans une optique
+                        Tous les types de profils sont acceptés sur Hydaria, que vous soyez dans une optique
                         purement fun ou purement
                         compétitive, nous espérons que vous puissiez trouver vos marques rapidement en notre
                         compagnie !
