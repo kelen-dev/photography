@@ -23,7 +23,7 @@
                             Nom :
                         </h4>
                         <p>
-                        {{ config('kelens.Info.name') }}
+                            {{ config('kelens.Info.username') }}
                         </p>
                     </div>
                     <div id="age load-hidden">
@@ -120,7 +120,7 @@
                         </li>
                         <li>
                             {{-- Instagram --}}
-                            <a href="https://www.instagram.com/kelens_dev/" aria-label="Instagram" target="_blank">
+                            <a href="http://instagram.kelens.fr" aria-label="Instagram" target="_blank">
                                 <i class="bi bi-instagram bi-2X"></i>
                             </a>
                         </li>
@@ -129,6 +129,10 @@
                             <a href="https://discord.kelens.fr" aria-label="Discord" target="_blank">
                                 <i class="bi bi-discord bi-2X"></i>
                             </a>
+                        </li>
+                        <li>
+                            {{-- Linkedin --}}
+                            <a class="btn btn-linkedin" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=sean-segura-399706261" target="_blank">Me suivre sur LinkedIn</a>
                         </li>
                     </ul>
                 </div>

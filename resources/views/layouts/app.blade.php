@@ -35,7 +35,6 @@
 
     {{-- Scripts --}}
     <script src="https://www.unpkg.com/browse/jquery@3.7.0/dist/jquery.min.js" defer></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js" defer></script>
     <script src="{{ asset('assets/vendor/axios/axios.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/css-vars-ponyfill.min.js') }}" defer></script>
     <script>

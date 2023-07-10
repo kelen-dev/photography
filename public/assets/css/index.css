@@ -155,6 +155,54 @@ html .content i + i {
 .header nav .navbar-brand img {
   border-radius: 50%;
   box-shadow: 0px 0px 10px 6px #000000;
+  animation: logoFadeIn 0.6s ease-in-out;
+}
+@keyframes logoFadeIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.header nav .navbar-nav {
+  animation: navFadeIn 1s ease-in-out;
+}
+@keyframes navFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.header nav .navbar-nav .nav-item .nav-link {
+  font-family: Merienda, cursive;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.header nav .navbar-nav .nav-item .nav-link .bi {
+  animation: iconFadeIn 0.4s ease-in-out;
+  animation-delay: 2s;
+}
+@keyframes iconFadeIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.header nav .navbar-nav .nav-item.active .nav-link {
+  font-weight: 700;
+  font-size: 20px;
+}
+.header nav .navbar-nav .nav-item.active .nav-link:after {
+  transform: scaleX(0);
+  transform-origin: left;
 }
 .header .navbar-toggler {
   margin-right: 3rem;
@@ -169,12 +217,6 @@ html .content i + i {
 .header .navbar-collapse {
   background-color: var(--color-contrast-lower);
 }
-.header a {
-  font-family: Merienda, cursive;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  font-weight: 700;
-}
 .header .navbar-brand {
   padding: 0 0 0 3rem;
   margin: 0;
@@ -184,14 +226,6 @@ html .content i + i {
 }
 .header .dropdown-toggle:after {
   border-top: 0;
-}
-.header .nav-item.active .nav-link {
-  font-weight: 700;
-  font-size: 20px;
-}
-.header .nav-item.active .nav-link:after {
-  transform: scaleX(0);
-  transform-origin: left;
 }
 .header .nav-link {
   position: relative;
@@ -593,6 +627,17 @@ html .content i + i {
   margin-left: 12rem;
   padding: 0.6rem 0 0.6rem 0;
   text-shadow: 0 6px 0 black;
+  animation: titleFadeIn 0.6s ease-in-out 0.3s;
+}
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 #a-propos .info {
   position: relative;
@@ -756,6 +801,21 @@ html .content i + i {
 #a-propos .social-media-links ul li a .bi-discord {
   color: #5865F2;
 }
+#a-propos .social-media-links ul li a.btn-linkedin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  width: 200px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #0A66C2;
+  font-family: "SF Pro Text", Helvetica, sans-serif;
+}
 @media screen and (min-width: 2500px) {
   #a-propos .info {
     padding-left: 10rem;
@@ -818,6 +878,17 @@ html .content i + i {
   margin-left: 12rem;
   padding: 0.6rem 0 0.6rem 0;
   text-shadow: 0 6px 0 black;
+  animation: titleFadeIn 0.6s ease-in-out 0.3s;
+}
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 #abstract .hobby {
   position: relative;
@@ -1286,6 +1357,7 @@ html .content i + i {
   background-color: #17181c;
   width: fit-content;
   padding: 0.2rem;
+  box-shadow: 0 0 6px black;
 }
 #abstract .education .name, #abstract .experience .name {
   font-size: 1.4rem;
@@ -1348,6 +1420,17 @@ html .content i + i {
   margin-left: 12rem;
   padding: 0.6rem 0 0.6rem 0;
   text-shadow: 0 6px 0 black;
+  animation: titleFadeIn 0.6s ease-in-out 0.3s;
+}
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 #projects ul {
   margin: 0;
@@ -1525,6 +1608,17 @@ html .content i + i {
   margin-left: 12rem;
   padding: 0.6rem 0 0.6rem 0;
   text-shadow: 0 6px 0 black;
+  animation: titleFadeIn 0.6s ease-in-out 0.3s;
+}
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 #p-setup #summary article {
   padding: 2rem 0 2rem 0;
@@ -1639,6 +1733,17 @@ html .content i + i {
   margin-left: 12rem;
   padding: 0.6rem 0 0.6rem 0;
   text-shadow: 0 6px 0 black;
+  animation: titleFadeIn 0.6s ease-in-out 0.3s;
+}
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 #p-setup #pictures .container {
   display: flex;

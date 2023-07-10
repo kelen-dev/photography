@@ -7,7 +7,68 @@
             img {
                 border-radius: 50%;
                 box-shadow: 0px 0px 10px 6px #000000;
+                animation: logoFadeIn .6s ease-in-out;
+
+                @keyframes logoFadeIn {
+                    0% {
+                        transform: scale(0);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
             }
+        }
+
+        .navbar-nav {
+            animation: navFadeIn 1s ease-in-out;
+            
+            @keyframes navFadeIn {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-100%);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0%);
+                    }
+                }
+                .nav-item {
+                    .nav-link {
+                        font-family: Merienda, cursive;
+                        font-size: 1.4rem;
+                        text-transform: uppercase;
+                        font-weight: 700;
+            
+                        .bi {
+                            animation: iconFadeIn .400s ease-in-out;
+                            animation-delay: 2s;
+                        
+                            @keyframes iconFadeIn {
+                                    0% {
+                                        transform: scale(0);
+                                    }
+            
+                                    100% {
+                                        transform: scale(1);
+                                    }
+                                }
+                        }
+                    }
+                    &.active {
+                        .nav-link {
+                            font-weight: 700;
+                            font-size: 20px;
+            
+                            &:after {
+                                transform: scaleX(0);
+                                transform-origin: left
+                            }
+                        }
+                    }
+                }
         }
     }
 
@@ -28,13 +89,6 @@
         background-color: var(--color-contrast-lower)
     }
 
-    a {
-        font-family: Merienda, cursive;
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        font-weight: 700
-    }
-
     .navbar-brand {
         padding: 0 0 0 3rem;
         margin: 0;
@@ -46,20 +100,6 @@
 
     .dropdown-toggle:after {
         border-top: 0
-    }
-
-    .nav-item {
-        &.active {
-            .nav-link {
-                font-weight: 700;
-                font-size: 20px;
-
-                &:after {
-                    transform: scaleX(0);
-                    transform-origin: left
-                }
-            }
-        }
     }
 
     .nav-link {
