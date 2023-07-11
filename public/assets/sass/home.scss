@@ -124,19 +124,19 @@
                     }
 
                     .bi-facebook {
-                        color: $facebook-color;
+                        color: var(--facebook-color);
                     }
 
                     .bi-twitter {
-                        color: $twitter-color;
+                        color: var(--twitter-color);
                     }
 
                     .bi-instagram {
-                        color: $instagram-color;
+                        color: var(--instagram-color);
                     }
 
                     .bi-discord {
-                        color: $discord-color;
+                        color: var(--discord-color);
                     }
 
                     &.btn-linkedin {
@@ -147,11 +147,11 @@
                         text-align: center;
                         outline: none;
                         text-decoration: none !important;
-                        color: $white !important;
+                        color: var(--white-color) !important;
                         width: 200px;
                         height: 32px;
                         border-radius: 16px;
-                        background-color: $blue;
+                        background-color: var(--blue-color);
                         font-family: "SF Pro Text", Helvetica, sans-serif;
                       }
                 }
@@ -357,19 +357,19 @@
 
         .date {
             text-shadow: 2px 2px 4px $rose;
-            color: black;
+            color: var(--black-color);
             font-size: 1.2rem;
             font-weight: bold;
-            background-color: #17181c;
+            background-color: var(--background-color);
             width: fit-content;
             padding: .2rem;
-            box-shadow: 0 0 6px black;
+            box-shadow: 0 0 6px var(--black-color);
         }
 
         .name {
             font-size: 1.4rem;
             font-weight: bold;
-            color: var(--color-white);
+            color: var(--white-color);
         }
 
         .description {
@@ -468,8 +468,8 @@
                     }
 
                     span {
-                        color: var(--color-white);
-                        background-color: #e43397;
+                        color: var(--white-color);
+                        background-color: var(--rose-color);
                         border-radius: 20px;
                         padding: .2rem;
                         text-align: center;
@@ -484,7 +484,7 @@
             }
 
             article {
-                color: var(--color-white);
+                color: var(--white-color);
             }
         }
     }
