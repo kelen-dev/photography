@@ -1,5 +1,3 @@
-@import "mixins";
-
 /* ==========================================================================
    Section à propos:
    ========================================================================== */
@@ -117,7 +115,7 @@
 
                 a {
                     .bi {
-                        text-shadow: 1px 4px 0 black;
+                        text-shadow: 1px 4px 0 $black;
                         transition: text-shadow .4s ease-in-out;
 
                         &:hover {
@@ -126,19 +124,19 @@
                     }
 
                     .bi-facebook {
-                        color: #273c75;
+                        color: $facebook-color;
                     }
 
                     .bi-twitter {
-                        color: #1da1f2;
+                        color: $twitter-color;
                     }
 
                     .bi-instagram {
-                        color: #ff0076;
+                        color: $instagram-color;
                     }
 
                     .bi-discord {
-                        color: #5865F2;
+                        color: $discord-color;
                     }
 
                     &.btn-linkedin {
@@ -149,11 +147,11 @@
                         text-align: center;
                         outline: none;
                         text-decoration: none !important;
-                        color: #ffffff !important;
+                        color: $white !important;
                         width: 200px;
                         height: 32px;
                         border-radius: 16px;
-                        background-color: #0A66C2;
+                        background-color: $blue;
                         font-family: "SF Pro Text", Helvetica, sans-serif;
                       }
                 }
@@ -292,7 +290,6 @@
 
             img {
                 position: relative;
-                /*The background extends to the outside edge of the padding. No background is drawn beneath the border.*/
                 background-clip: padding-box;
                 border-radius: inherit;
                 width: 54px;
@@ -330,7 +327,7 @@
             &:after {
                 content: "";
                 position: absolute;
-                background: #e43397;
+                background: $rose;
                 left: 0;
                 top: 0;
                 bottom: 0;
@@ -359,8 +356,10 @@
         @include h3;
 
         .date {
-            color: var(--color-accent);
+            text-shadow: 2px 2px 4px $rose;
+            color: black;
             font-size: 1.2rem;
+            font-weight: bold;
             background-color: #17181c;
             width: fit-content;
             padding: .2rem;

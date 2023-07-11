@@ -33,7 +33,7 @@ html {
     ========================================================================== */
     #button {
         opacity: 0;
-        color: #fff;
+        color: var(--white-color);
         right: -40px;
         bottom: 260px;
         z-index: 1000;
@@ -60,7 +60,7 @@ html {
             transform: scaleX(0);
             transition: transform .6s;
             transform-origin: 100% 0;
-            background: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
+            background: var(--gradient-color);
         }
 
         &:hover {

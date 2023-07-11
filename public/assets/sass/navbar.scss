@@ -6,7 +6,7 @@
         .navbar-brand {
             img {
                 border-radius: 50%;
-                box-shadow: 0px 0px 10px 6px #000000;
+                box-shadow: 0px 0px 10px 6px $black;
                 animation: logoFadeIn .6s ease-in-out;
 
                 @keyframes logoFadeIn {
@@ -119,7 +119,7 @@
             transform: scaleX(0);
             transition: transform .6s;
             transform-origin: 100% 0;
-            background: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
+            background: $gradient;
         }
 
         &.active {
@@ -136,7 +136,7 @@
                 transform: scaleX(1);
                 transition: transform .6s;
                 transform-origin: 100% 0;
-                background: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
+                background: $gradient;
             }
         }
 
@@ -268,7 +268,7 @@
             opacity: 0;
             font-weight: 400;
             font-family: "Lato";
-            color: #fff;
+            color: $white;
             font-size: 24px;
             text-transform: uppercase;
             letter-spacing: 5px;
@@ -297,7 +297,7 @@
 
             .h1_KelenS {
                 font-family: "Poppins";
-                color: #fff;
+                color: $white;
                 font-size: 64px;
                 -webkit-animation: mainFadeIn 2s forwards;
                 -o-animation: mainFadeIn 2s forwards;
@@ -350,7 +350,7 @@
                 opacity: 0;
                 font-weight: 400;
                 font-family: "Lato";
-                color: #fff;
+                color: $white;
                 font-size: 24px;
                 text-transform: uppercase;
                 letter-spacing: 5px;
@@ -472,7 +472,7 @@
         display: inline-block;
         -webkit-transform: translate(0, -50%);
         transform: translate(0, -50%);
-        color: #fff;
+        color: $white;
         font: normal 400 20px/1 "Josefin Sans", sans-serif;
         letter-spacing: .1em;
         text-align: center;
@@ -496,7 +496,7 @@
             width: 30px;
             height: 50px;
             margin-left: -15px;
-            border: 2px solid #fff;
+            border: 2px solid $white;
             border-radius: 50px;
             box-sizing: border-box;
 
@@ -508,7 +508,7 @@
                 width: 6px;
                 height: 6px;
                 margin-left: -3px;
-                background-color: #fff;
+                background-color: $white;
                 border-radius: 100%;
                 -webkit-animation: sdb10 2s infinite;
                 animation: sdb10 2s infinite;

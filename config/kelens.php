@@ -7,5 +7,5 @@ return [
         'email' => 'contact@seansegura.com',
         'tel' => '06 41 49 25 15',
         'site' => 'kelens.fr'
-    ]
+    ],
 ];

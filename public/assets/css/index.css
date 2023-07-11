@@ -1,4 +1,16 @@
 @charset "UTF-8";
+:root {
+  --background-color: #17181c;
+  --white-color: white;
+  --black-color: rgba(0, 0, 0, 0);
+  --rose-color: #e43397;
+  --gradient-color: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
+  --facebook-color: #273c75;
+  --twitter-color: #1da1f2;
+  --instagram-color: #ff0076;
+  --discord-color: #5865F2;
+}
+
 /* ==========================================================================
    Styles:
    ========================================================================== */
@@ -44,7 +56,7 @@ html body {
 }
 html #button {
   opacity: 0;
-  color: #fff;
+  color: var(--white-color);
   right: -40px;
   bottom: 260px;
   z-index: 1000;
@@ -71,7 +83,7 @@ html #button:after {
   transform: scaleX(0);
   transition: transform 0.6s;
   transform-origin: 100% 0;
-  background: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
+  background: var(--gradient-color);
 }
 html #button:hover {
   cursor: pointer;
@@ -154,7 +166,7 @@ html .content i + i {
 }
 .header nav .navbar-brand img {
   border-radius: 50%;
-  box-shadow: 0px 0px 10px 6px #000000;
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0);
   animation: logoFadeIn 0.6s ease-in-out;
 }
 @keyframes logoFadeIn {
@@ -373,7 +385,7 @@ html .content i + i {
   opacity: 0;
   font-weight: 400;
   font-family: "Lato";
-  color: #fff;
+  color: white;
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -399,7 +411,7 @@ html .content i + i {
   }
   .box_KelenS .title_KelenS .h1_KelenS {
     font-family: "Poppins";
-    color: #fff;
+    color: white;
     font-size: 64px;
     -webkit-animation: mainFadeIn 2s forwards;
     -o-animation: mainFadeIn 2s forwards;
@@ -448,7 +460,7 @@ html .content i + i {
     opacity: 0;
     font-weight: 400;
     font-family: "Lato";
-    color: #fff;
+    color: white;
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -544,7 +556,7 @@ html .content i + i {
   display: inline-block;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
-  color: #fff;
+  color: white;
   font: normal 400 20px/1 "Josefin Sans", sans-serif;
   letter-spacing: 0.1em;
   text-align: center;
@@ -565,7 +577,7 @@ html .content i + i {
   width: 30px;
   height: 50px;
   margin-left: -15px;
-  border: 2px solid #fff;
+  border: 2px solid white;
   border-radius: 50px;
   box-sizing: border-box;
 }
@@ -577,7 +589,7 @@ html .content i + i {
   width: 6px;
   height: 6px;
   margin-left: -3px;
-  background-color: #fff;
+  background-color: white;
   border-radius: 100%;
   -webkit-animation: sdb10 2s infinite;
   animation: sdb10 2s infinite;
@@ -783,7 +795,7 @@ html .content i + i {
   margin-left: 1rem;
 }
 #a-propos .social-media-links ul li a .bi {
-  text-shadow: 1px 4px 0 black;
+  text-shadow: 1px 4px 0 rgba(0, 0, 0, 0);
   transition: text-shadow 0.4s ease-in-out;
 }
 #a-propos .social-media-links ul li a .bi:hover {
@@ -809,7 +821,7 @@ html .content i + i {
   text-align: center;
   outline: none;
   text-decoration: none !important;
-  color: #ffffff !important;
+  color: white !important;
   width: 200px;
   height: 32px;
   border-radius: 16px;
@@ -968,7 +980,6 @@ html .content i + i {
 }
 #abstract .langages .logo img {
   position: relative;
-  /*The background extends to the outside edge of the padding. No background is drawn beneath the border.*/
   background-clip: padding-box;
   border-radius: inherit;
   width: 54px;
@@ -1352,8 +1363,10 @@ html .content i + i {
   transition: width 0.4s ease-in-out;
 }
 #abstract .education .date, #abstract .experience .date {
-  color: var(--color-accent);
+  text-shadow: 2px 2px 4px #e43397;
+  color: black;
   font-size: 1.2rem;
+  font-weight: bold;
   background-color: #17181c;
   width: fit-content;
   padding: 0.2rem;
@@ -2176,3 +2189,5 @@ html .content i + i {
   grid-column: 8/13;
   text-align: end;
 }
+
+/*# sourceMappingURL=index.css.map */

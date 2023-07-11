@@ -95,7 +95,7 @@
                         méritez le respect et l'amour de ceux qui vous entourent ~
                     </blockquote>
                     <cite>
-                        {{ config('kelens.Info.name') }}
+                        {{ config('kelens.Info.username') }}
                     </cite>
                 </div>
 

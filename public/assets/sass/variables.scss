@@ -1,0 +1,22 @@
+$background-color: #17181c;
+$white: #ffff;
+$black: #0000;
+$rose: #e43397;
+$blue: #0A66C2;
+$gradient: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
+$facebook-color: #273c75;
+$twitter-color: #1da1f2;
+$instagram-color: #ff0076;
+$discord-color: #5865F2;
+
+:root {
+    --background-color: #{$background-color};
+    --white-color: #{$white};
+    --black-color: #{$black};
+    --rose-color: #{$rose};
+    --gradient-color: #{$gradient};
+    --facebook-color: #{$facebook-color};
+    --twitter-color: #{$twitter-color};
+    --instagram-color: #{$instagram-color};
+    --discord-color: #{$discord-color};
+}

@@ -54,7 +54,6 @@
     <script src="{{ asset('assets/js/navbar.js') }}" defer></script>
     <script src="{{ asset('assets/js/setup.js') }}" defer></script>
     <script src="{{ asset('assets/js/discord-widget.js') }}" defer></script>
-    <script src="{{ asset('assets/js/scrollreveal.js') }}" defer></script>
 
     {{-- Bootstrap --}}
     <link href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
