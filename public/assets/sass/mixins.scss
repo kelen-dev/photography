@@ -5,28 +5,33 @@
         display: flex;
         justify-content: center;
         margin-left: 1rem;
+
+        &:hover {
+            color: var(--white-color);
+        }
     }
 }
 
 @mixin h2 {
     h2 {
         font-size: 4rem;
+        width: fit-content;
         margin-left: 12rem;
         padding: .6rem 0 .6rem 0;
-        text-shadow: 0 6px 0 var(--black-color);
+        @include text-shadow;
         animation: titleFadeIn .6s ease-in-out .300s;
-            
-            @keyframes titleFadeIn {
-                    0% {
-                        opacity: 0;
-                        transform: translateX(-100%);
-                    }
 
-                    100% {
-                        opacity: 1;
-                        transform: translateX(0%);
-                    }
-                }
+        @keyframes titleFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0%);
+            }
+        }
     }
 }
 
@@ -47,6 +52,7 @@
 
         &:hover {
             cursor: default;
+
             &:after {
                 content: "";
                 position: absolute;
@@ -61,8 +67,17 @@
             left: 0;
             height: 2px;
             width: 20%;
-            background: var(--gradient-color);
+            background: var(--background-gradient);
             transition: width 0.4s ease-in-out;
         }
+    }
+}
+
+@mixin text-shadow {
+    text-shadow: 1px 4px 0 var(--black-color);
+    transition: text-shadow .4s ease-in-out;
+
+    &:hover {
+        text-shadow: none;
     }
 }

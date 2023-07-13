@@ -224,10 +224,10 @@
 
                 <div class="img-setup">
                     <img src="{{ asset('assets/img/Setup 2023.webp')}}" alt="Setup" class="img-fluid"
-                         onclick="myFunction(this);">
+                         onclick="imgExpand(this);">
                     <img src="{{ asset('assets/img/périphériques.webp')}}" alt="Périphériques" class="img-fluid"
-                         onclick="myFunction(this);">
-                    <img src="{{ asset('assets/img/pc.webp')}}" alt="PC" class="img-fluid" onclick="myFunction(this);">
+                         onclick="imgExpand(this);">
+                    <img src="{{ asset('assets/img/pc.webp')}}" alt="PC" class="img-fluid" onclick="imgExpand(this);">
                 </div>
 
                 <div class="img-setup-expanted">

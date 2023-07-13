@@ -6,10 +6,6 @@
 <div id="p-kelenscorp">
     <section id="summary">
         <div class="container">
-            <h2>
-                Informations
-            </h2>
-
             <ul class="skills-project">
                 <li>
                     <span>
@@ -90,7 +86,7 @@
                 <div class="wrapper">
                     {{-- left part --}}
 
-                    <img src="{{ asset('assets/img/interrogation.webp') }}" alt="echelon" class="img-fluid">
+                    <img src="{{ asset('assets/img/projects/website-icon.webp') }}" alt="echelon" class="img-fluid">
 
 
                     {{-- right part --}}
@@ -107,30 +103,6 @@
                 </div>
             </div>
         </article>
-    </section>
-
-    <section id="pictures">
-        <div class="container">
-            <h2>
-                Images
-            </h2>
-
-            <div class="img-setup">
-                <img src="{{ asset('assets/img/Setup 2023.webp')}}" alt="Setup" class="img-fluid" onclick="myFunction(this);">
-                <img src="{{ asset('assets/img/périphériques.webp')}}" alt="Périphériques" class="img-fluid" onclick="myFunction(this);">
-                <img src="{{ asset('assets/img/pc.webp')}}" alt="PC" class="img-fluid" onclick="myFunction(this);">
-            </div>
-
-            <div class="img-setup-expanted">
-                <span onclick="this.parentElement.style.display='none'" class="closebtn">
-                    &times;
-                </span>
-
-                <img id="expandedImg">
-
-                <p id="imgtext"></p>
-            </div>
-        </div>
     </section>
 </div>
 @endsection

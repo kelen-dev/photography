@@ -6,10 +6,6 @@
     <div id="p-hydaria">
         <section id="summary">
             <div class="container">
-                <h2>
-                    Informations
-                </h2>
-
                 <ul class="skills-project">
                     <li>
                         <span>
@@ -159,34 +155,6 @@
                     </div>
                 </div>
             </article>
-        </section>
-
-        <section id="pictures">
-            <div class="container">
-                <h2>
-                    Images
-                </h2>
-
-                <div class="img-setup">
-                    <img src="{{ asset('assets/img/Setup 2023.webp') }}" alt="Setup" class="img-fluid"
-                        onclick="myFunction(this);">
-                    <img src="{{ asset('assets/img/périphériques.webp') }}" alt="Périphériques" class="img-fluid"
-                        onclick="myFunction(this);">
-                    <img src="{{ asset('assets/img/pc.webp') }}" alt="PC" class="img-fluid"
-                        onclick="myFunction(this);">
-                </div>
-
-                <div class="img-setup-expanted">
-
-                    <img id="expandedImg">
-                    
-                    <span onclick="this.parentElement.style.display='none'" class="closebtn">
-                        &times;
-                    </span>
-
-                    <p id="imgtext"></p>
-                </div>
-            </div>
         </section>
     </div>
 @endsection

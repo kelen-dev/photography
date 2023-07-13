@@ -109,18 +109,13 @@
                 margin: 0;
                 padding: 0;
 
-                + li {
+                +li {
                     margin-left: 1rem;
                 }
 
                 a {
                     .bi {
-                        text-shadow: 1px 4px 0 $black;
-                        transition: text-shadow .4s ease-in-out;
-
-                        &:hover {
-                            text-shadow: none;
-                        }
+                        @include text-shadow;
                     }
 
                     .bi-facebook {
@@ -143,17 +138,12 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
-                        padding: 7px;
-                        text-align: center;
-                        outline: none;
-                        text-decoration: none !important;
-                        color: var(--white-color) !important;
-                        width: 200px;
-                        height: 32px;
-                        border-radius: 16px;
                         background-color: var(--blue-color);
-                        font-family: "SF Pro Text", Helvetica, sans-serif;
-                      }
+
+                        &:hover {
+                            color: var(--white-color);
+                        }
+                    }
                 }
             }
         }
@@ -189,6 +179,7 @@
         h2 {
             margin: 0;
         }
+
         .info {
             display: flex;
             flex-direction: column;
@@ -198,15 +189,22 @@
             &:after {
                 display: none;
             }
+
+            div {
+                margin-left: 0;
+            }
         }
+
         .about {
             grid-column: 1 / 13;
             grid-row: 2;
         }
+
         .citation {
             grid-column: 1 / 13;
             grid-row: 3;
         }
+
         .social-media-links {
             grid-column: 1 / 13;
             grid-row: 4;
@@ -221,7 +219,7 @@
 #abstract {
     background-color: var(--color-contrast-lower);
 
-    ul + {
+    ul+ {
         ul {
             margin-top: 2rem;
         }
@@ -250,6 +248,7 @@
             display: flex;
             align-items: flex-end;
             flex-direction: column;
+            @include text-shadow;
 
             p {
                 hyphens: auto;
@@ -320,7 +319,7 @@
             position: relative;
             height: 10px;
 
-            + .barre {
+            +.barre {
                 margin-top: 10px;
             }
 
@@ -335,7 +334,7 @@
 
             @for $i from 10 through 100 {
                 &[data-length="#{$i}"]:after {
-                    width: #{$i} + "%";
+                    width: #{$i}+"%";
                 }
             }
         }
@@ -352,12 +351,12 @@
         grid-column: 4 / 8;
     }
 
-    .education, .experience {
+    .education,
+    .experience {
         @include h3;
 
         .date {
-            text-shadow: 2px 2px 4px var(--grey-color);
-            color: var(--black-color);
+            @include text-shadow;
             font-size: 1.2rem;
             font-weight: 900;
             background-color: var(--background-color);
@@ -370,6 +369,7 @@
             font-size: 1.4rem;
             font-weight: bold;
             color: var(--white-color);
+            @include text-shadow;
         }
 
         .description {
@@ -398,6 +398,7 @@
         h2 {
             margin: 0;
         }
+
         .hobby {
             align-content: center;
             grid-column: 1 / 4;
@@ -416,14 +417,17 @@
                 top: 902px;
             }
         }
+
         .langages {
             grid-column: 4 / 13;
             grid-row: 1;
         }
+
         .education {
             grid-column: 4 / 13;
             grid-row: 2;
         }
+
         .experience {
             grid-column: 4 / 13;
             grid-row: 3;
@@ -436,6 +440,7 @@
    ========================================================================== */
 #projects {
     @include h2;
+    position: relative;
 
     ul {
         margin: 0;
@@ -454,6 +459,23 @@
             }
 
             @include h3;
+
+            .img-projects {
+                text-align: center;
+
+                img {
+                    width: max-content;
+                    max-height: 400px;
+                    padding: 10px;
+                    opacity: 0.8;
+                    cursor: pointer;
+                    transition: opacity ease-in-out .2s;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 
@@ -461,6 +483,7 @@
         h2 {
             margin: 0;
         }
+
         li {
             grid-column: 1 / 13 !important;
             grid-row: 1;

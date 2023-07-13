@@ -34,25 +34,12 @@
     @stack('scripts')
 
     {{-- Scripts --}}
-    <script src="https://www.unpkg.com/browse/jquery@3.7.0/dist/jquery.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" defer></script>
     <script src="{{ asset('assets/vendor/axios/axios.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/css-vars-ponyfill.min.js') }}" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-            $('[data-toggle="tooltip"]').tooltip();
-            $('[data-confirm="delete"]').on('click', function (e) {
-                e.preventDefault();
-                $('#confirmDeleteForm').attr('action', $(this).attr('href'));
-                $('#confirmDeleteModal').modal('show');
-            });
-            cssVars({});
-        });
-    </script>
     <script src="{{ asset('assets/js/app.js') }}" defer></script>
     <script src="{{ asset('assets/js/button.js') }}" defer></script>
-    <script src="{{ asset('assets/js/navbar.js') }}" defer></script>
-    <script src="{{ asset('assets/js/setup.js') }}" defer></script>
+    <script src="{{ asset('assets/js/imgexpand.js') }}" defer></script>
     <script src="{{ asset('assets/js/discord-widget.js') }}" defer></script>
 
     {{-- Bootstrap --}}

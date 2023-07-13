@@ -1,28 +1,42 @@
-#p-kelenscorp, #p-hydaria, #p-bountyfac {
+#p-kelenscorp,
+#p-hydaria,
+#p-bountyfac {
+
     /* ==========================================================================
         Section résumé:
    ========================================================================== */
     #summary {
-        @include h2;
-
         .skills-project {
             display: flex;
             margin-bottom: .4rem;
-        
+
             li {
                 margin-right: .4rem;
                 padding: 0;
-        
+
                 &:last-child {
                     margin: 0;
                 }
-        
+
                 span {
-                    color: var(--white-color);
+                    box-shadow: inset 0 1px 8px var(--black-color),
+                        1px 4px 0 var(--black-color);
+                    transition: all .4s ease-in-out;
                     background-color: var(--rose-color);
+                    @include text-shadow;
                     border-radius: 20px;
                     padding: .2rem;
                     text-align: center;
+                    vertical-align: middle;
+                    font-weight: 900;
+                    line-height: 0;
+                    width: fit-content;
+                    color: var(--white-color);
+
+                    &:hover {
+                        box-shadow: none;
+                        text-shadow: none;
+                    }
                 }
             }
         }
@@ -34,22 +48,27 @@
                 margin-bottom: 0;
             }
 
-            @include h3;
+            .container {
+                @include h3;
 
-            img {
-                border-radius: 50%;
-                box-shadow: inset 0 0 6px var(--black-color);
-            }
+                .wrapper {
+                    place-items: center;
 
-            h5 {
-                margin-bottom: .4rem;
-            }
+                    img {
+                        object-fit: contain;
+                    }
 
-            p {
-                text-align: justify;
+                    h5 {
+                        margin-bottom: .4rem;
+                    }
 
-                + h5 {
-                    margin-top: 1rem;
+                    p {
+                        text-align: justify;
+
+                        +h5 {
+                            margin-top: 1rem;
+                        }
+                    }
                 }
             }
 
@@ -92,9 +111,14 @@
             }
         }
 
+        /* ==========================================================================
+            Responsive:
+        ========================================================================== */
         @media screen and (min-width: 2500px) {
             article {
-                &#qu-est-ce-que-c-est, &#un-site {
+
+                &#qu-est-ce-que-c-est,
+                &#un-site {
                     .text-right-part {
                         display: flex;
                         flex-direction: column;
@@ -112,25 +136,12 @@
             }
         }
 
-        @media screen and (max-width: 960px) {
-            .info {
-                width: max-content;
-
-                &:after {
-                    display: none;
-                }
-
-                div {
-                    display: flex;
-                }
-            }
-        }
-
         @media screen and (max-width: 460px) {
-            @include h2-mobile;
-
             article {
-                &#qu-est-ce-que-c-est, &#que-proposez-vous, &#un-site {
+
+                &#qu-est-ce-que-c-est,
+                &#que-proposez-vous,
+                &#un-site {
                     .container {
                         .wrapper {
                             img {
@@ -142,89 +153,6 @@
                     }
                 }
             }
-        }
-    }
-
-    /* ==========================================================================
-          Section Images:
-    ========================================================================== */
-    #pictures {
-        background-color: var(--color-contrast-lower);
-        @include h2;
-
-        .container {
-            display: flex;
-            flex-direction: column;
-
-            .img-setup {
-                text-align: center;
-
-                img {
-                    width: 25%;
-                    height: fit-content;
-                    padding: 10px;
-                    opacity: 0.8;
-                    cursor: pointer;
-                    transition: ease-in-out .2s;
-
-                    &:hover {
-                        opacity: 1;
-                    }
-                }
-            }
-
-            .img-setup-expanted {
-                position: relative;
-
-                .closebtn {
-                    position: absolute;
-                    top: 10px;
-                    right: 15px;
-                    color: var(--white-color);
-                    font-size: 35px;
-                    cursor: pointer;
-                }
-
-                #expandedImg {
-                    width: 100%;
-                }
-
-                #imgtext {
-                    background: rgba(16, 15, 15, 0.6);
-                    border-radius: 20px;
-                    position: absolute;
-                    font-size: 20px;
-                    padding: .6rem;
-                    bottom: 15px;
-                    color: var(--white-color);
-                    left: 15px;
-                }
-            }
-        }
-
-        /* ==========================================================================
-            Responsive:
-        ========================================================================== */
-        @media screen and (min-width: 2500px) {
-
-        }
-
-        @media screen and (max-width: 960px) {
-            .info {
-                width: max-content;
-
-                &:after {
-                    display: none;
-                }
-
-                div {
-                    display: flex;
-                }
-            }
-        }
-
-        @media screen and (max-width: 460px) {
-            @include h2-mobile;
         }
     }
 }
