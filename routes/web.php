@@ -39,6 +39,18 @@ Route::get('/setup', function () {
     return view('/p/setup');
 })->name('setup');
 
+Route::get('/projects/kelenscorp', function () {
+    return view('/p/projets/kelenscorp');
+})->name('kelenscorp');
+
+Route::get('/projects/hydaria', function () {
+    return view('/p/projets/hydaria');
+})->name('hydaria');
+
+Route::get('/projects/bountyfac', function () {
+    return view('/p/projets/bountyfac');
+})->name('bountyfac');
+
 Route::prefix('contact')->name('contact.')->group(function () {
     Route::get('/', [ContactsController::class, 'create'])->name('index');
     Route::post('/', [ContactsController::class, 'store'])->name('index');

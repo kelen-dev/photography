@@ -356,10 +356,10 @@
         @include h3;
 
         .date {
-            text-shadow: 2px 2px 4px $rose;
+            text-shadow: 2px 2px 4px var(--grey-color);
             color: var(--black-color);
             font-size: 1.2rem;
-            font-weight: bold;
+            font-weight: 900;
             background-color: var(--background-color);
             width: fit-content;
             padding: .2rem;
@@ -454,38 +454,6 @@
             }
 
             @include h3;
-
-            .skills-project {
-                display: flex;
-                margin-bottom: .4rem;
-
-                li {
-                    margin-right: .4rem;
-                    padding: 0;
-
-                    &:last-child {
-                        margin: 0;
-                    }
-
-                    span {
-                        color: var(--white-color);
-                        background-color: var(--rose-color);
-                        border-radius: 20px;
-                        padding: .2rem;
-                        text-align: center;
-                    }
-                }
-            }
-
-            p + {
-                p {
-                    margin-top: .4rem;
-                }
-            }
-
-            article {
-                color: var(--white-color);
-            }
         }
     }
 
