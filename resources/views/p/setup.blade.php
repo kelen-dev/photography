@@ -223,11 +223,11 @@
                 </h2>
 
                 <div class="img-setup">
-                    <img src="{{ asset('assets/img/Setup 2023.webp')}}" alt="Setup" class="img-fluid"
+                    <img src="{{ asset('assets/img/setup/Setup 2023.webp')}}" alt="Setup" class="img-fluid"
                          onclick="imgExpand(this);">
-                    <img src="{{ asset('assets/img/périphériques.webp')}}" alt="Périphériques" class="img-fluid"
+                    <img src="{{ asset('assets/img/setup/périphériques.webp')}}" alt="Périphériques" class="img-fluid"
                          onclick="imgExpand(this);">
-                    <img src="{{ asset('assets/img/pc.webp')}}" alt="PC" class="img-fluid" onclick="imgExpand(this);">
+                    <img src="{{ asset('assets/img/setup/pc.webp')}}" alt="PC" class="img-fluid" onclick="imgExpand(this);">
                 </div>
 
                 <div class="img-setup-expanted">

@@ -147,67 +147,67 @@
                 }
             }
         }
-    }
 
-    @media screen and (min-width: 2500px) {
-        .info {
-            padding-left: 10rem;
+        @media screen and (min-width: 2500px) {
+            .info {
+                padding-left: 10rem;
 
-            &:after {
-                width: 34rem;
-                right: -238px;
-                top: 254px;
+                &:after {
+                    width: 34rem;
+                    right: -238px;
+                    top: 254px;
+                }
             }
         }
-    }
 
-    @media screen and (max-width: 960px) {
-        .info {
-            width: max-content;
+        @media screen and (max-width: 960px) {
+            .info {
+                width: max-content;
 
-            &:after {
-                display: none;
+                &:after {
+                    display: none;
+                }
+
+                div {
+                    display: flex;
+                }
+            }
+        }
+
+        @media screen and (max-width: 460px) {
+            h2 {
+                margin: 0;
             }
 
-            div {
+            .info {
                 display: flex;
-            }
-        }
-    }
+                flex-direction: column;
+                grid-column: 1 / 13;
+                grid-row: 1;
 
-    @media screen and (max-width: 460px) {
-        h2 {
-            margin: 0;
-        }
+                &:after {
+                    display: none;
+                }
 
-        .info {
-            display: flex;
-            flex-direction: column;
-            grid-column: 1 / 13;
-            grid-row: 1;
-
-            &:after {
-                display: none;
+                div {
+                    margin-left: 0;
+                }
             }
 
-            div {
-                margin-left: 0;
+            .about {
+                grid-column: 1 / 13;
+                grid-row: 2;
             }
-        }
 
-        .about {
-            grid-column: 1 / 13;
-            grid-row: 2;
-        }
+            .citation {
+                grid-column: 1 / 13;
+                grid-row: 3;
+            }
 
-        .citation {
-            grid-column: 1 / 13;
-            grid-row: 3;
-        }
-
-        .social-media-links {
-            grid-column: 1 / 13;
-            grid-row: 4;
+            .social-media-links {
+                grid-column: 1 / 13;
+                grid-row: 4;
+            }
         }
     }
 }

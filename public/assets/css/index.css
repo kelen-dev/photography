@@ -353,7 +353,7 @@ html .content .img-setup-expanted #imgtext {
 }
 
 .setup-background {
-  background: url("../img/Setup 2023.webp") no-repeat center/cover;
+  background: url("../img/setup/Setup 2023.webp") no-repeat center/cover;
   position: relative;
   min-height: 100vh;
   box-shadow: inset 0 0 20px hsla(225deg, 33%, 7%, 0.5);
@@ -874,51 +874,51 @@ html .content .img-setup-expanted #imgtext {
   color: var(--white-color);
 }
 @media screen and (min-width: 2500px) {
-  #a-propos .info {
+  #a-propos .social-media-links .info {
     padding-left: 10rem;
   }
-  #a-propos .info:after {
+  #a-propos .social-media-links .info:after {
     width: 34rem;
     right: -238px;
     top: 254px;
   }
 }
 @media screen and (max-width: 960px) {
-  #a-propos .info {
+  #a-propos .social-media-links .info {
     width: max-content;
   }
-  #a-propos .info:after {
+  #a-propos .social-media-links .info:after {
     display: none;
   }
-  #a-propos .info div {
+  #a-propos .social-media-links .info div {
     display: flex;
   }
 }
 @media screen and (max-width: 460px) {
-  #a-propos h2 {
+  #a-propos .social-media-links h2 {
     margin: 0;
   }
-  #a-propos .info {
+  #a-propos .social-media-links .info {
     display: flex;
     flex-direction: column;
     grid-column: 1/13;
     grid-row: 1;
   }
-  #a-propos .info:after {
+  #a-propos .social-media-links .info:after {
     display: none;
   }
-  #a-propos .info div {
+  #a-propos .social-media-links .info div {
     margin-left: 0;
   }
-  #a-propos .about {
+  #a-propos .social-media-links .about {
     grid-column: 1/13;
     grid-row: 2;
   }
-  #a-propos .citation {
+  #a-propos .social-media-links .citation {
     grid-column: 1/13;
     grid-row: 3;
   }
-  #a-propos .social-media-links {
+  #a-propos .social-media-links .social-media-links {
     grid-column: 1/13;
     grid-row: 4;
   }
