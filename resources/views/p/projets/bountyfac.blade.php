@@ -9,25 +9,25 @@
                 <ul class="skills-project">
                     <li>
                         <span>
-                            développement sous le CMS Azuriom
+                            Gestion d'équipe
                         </span>
                     </li>
 
                     <li>
                         <span>
-                            savoir utiliser PHP
+                            Gestion de conflits et d'intêrets
                         </span>
                     </li>
 
                     <li>
                         <span>
-                            connaître le SCSS
+                            Maîtriser le serveur
                         </span>
                     </li>
 
                     <li>
                         <span>
-                            apprendre le Framework Laravel
+                            Savoir déléguer
                         </span>
                     </li>
                 </ul>
@@ -49,37 +49,42 @@
 
                         <div class="text-right-part">
                             <h5>
-                                Hydaria Corp : une plateforme multi-gaming pour tous
+                                La BountyFac : une faction sur le serveur tant réputé, Paladium
                             </h5>
 
                             <p>
-                                Hydaria Corp est une plateforme de jeu en ligne qui offre une expérience de jeu unique pour
-                                tous les types de joueurs. Cette plateforme propose une grande variété de jeux et permet aux
-                                joueurs de se connecter entre eux pour jouer ensemble. Dans cet essai, nous allons explorer
-                                les différents aspects de Hydaria Corp et pourquoi c'est une plateforme populaire pour les
-                                joueurs de tous âges.
+                                La BountyFac est une faction sur le serveur Minecraft populaire, et, numéro 1 en PvP-Faction
+                                Moddé, Paladium. La faction est ouverte à tous les types de joueurs.
+                                Cette faction propose une grande variété de postes comme (Farmeur, Mineur, PvP player) et
+                                permet aux joueurs d'être dans une faction où tout est possible.
+                                <br>
+                                La faction dispose bien entendu d'un serveur Discord pour que les gens puissent être entre
+                                eux pour jouer ensemble.
                             </p>
 
                             <h5>
-                                Une communauté accueillante
+                                Une faction accueillante et non discriminatoire
                             </h5>
 
                             <p>
-                                Hydaria Corp est connue pour sa communauté accueillante et amicale. Les joueurs peuvent se
-                                connecter avec d'autres joueurs du monde entier et jouer ensemble. La plateforme offre
-                                également des forums de discussion où les joueurs peuvent discuter de leurs jeux préférés et
-                                se faire de nouveaux amis.
+                                La BountyFac est connue pour sa communauté accueillante, amicale. Mais pas que. En effet,
+                                notre faction permet aussi aux personnes de la communauté LGBT d'être en sécurité et de se
+                                sentir bien.
+                                <br>
+                                Les joueurs peuvent se connecter avec d'autres joueurs du monde entier et jouer ensemble. La
+                                faction offre
+                                également des forums de discussion où les joueurs peuvent discuter et se faire de nouveaux
+                                amis.
                             </p>
 
                             <h5>
-                                Une plateforme accessible
+                                Une faction accessible
                             </h5>
 
                             <p>
-                                Hydaria Corp est une plateforme accessible à tous les joueurs, quel que soit leur niveau de
-                                compétence. Les joueurs peuvent jouer gratuitement ou choisir de payer pour des
-                                fonctionnalités supplémentaires. De plus, la plateforme est disponible sur une variété de
-                                dispositifs, y compris les ordinateurs, les tablettes et les téléphones portables.
+                                La BountyFac est une faction accessible à tous les joueurs, quel que soit leur niveau de
+                                PvP, leur ancienneté sur le serveur etc. Les joueurs peuvent jouer gratuitement, donc, sans
+                                grade, ou, choisir de payer pour un grade et bien d'autres choses.
                             </p>
 
                             <h5>
@@ -87,10 +92,12 @@
                             </h5>
 
                             <p>
-                                En conclusion, Hydaria Corp est une plateforme multi-gaming pour tous les joueurs. Avec une
-                                variété de jeux disponibles, une communauté accueillante et une accessibilité à tous les
-                                niveaux de compétence, c'est une plateforme populaire pour les joueurs de tous les âges.
-                                Rejoignez la communauté Hydaria Corp dès aujourd'hui et découvrez une nouvelle expérience de
+                                En conclusion, La BountyFac est une faction pour tous les joueurs. Avec une
+                                variété de postes disponibles, une faction accueillante et une accessibilité à tous les
+                                niveaux de compétence et d'ancienneté. C'est une faction populaire pour les joueurs de tous
+                                les âges.
+                                Rejoignez la communauté de La BountyFac dès aujourd'hui et découvrez une nouvelle expérience
+                                de
                                 jeu passionnante.
                             </p>
                         </div>
@@ -109,15 +116,14 @@
 
                         <div class="text-left-part">
                             <h5>
-                                Une variété de jeux
+                                Une ascendence accrue
                             </h5>
 
                             <p>
-                                Hydaria Corp offre une variété de jeux pour tous les goûts, des jeux d'action et d'aventure
-                                aux jeux de simulation et de stratégie. Les joueurs peuvent choisir parmi une liste de jeux
-                                populaires tels que Minecraft, Fortnite, Apex Legends et League of Legends. De plus, la
-                                plateforme propose également des jeux moins connus pour ceux qui veulent découvrir de
-                                nouvelles expériences.
+                                La BountyFac offre une variété de grades pour tous les goûts, des grades pour l'action comme
+                                le PvP.
+                                Les joueurs peuvent choisir parmi une liste de grades, et, au fur et à mesure de leurs
+                                engagements au sein de la faction, nous les montont en grade.
                             </p>
                         </div>
 
