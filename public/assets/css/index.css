@@ -874,51 +874,51 @@ html .content .img-setup-expanted #imgtext {
   color: var(--white-color);
 }
 @media screen and (min-width: 2500px) {
-  #a-propos .social-media-links .info {
+  #a-propos .info {
     padding-left: 10rem;
   }
-  #a-propos .social-media-links .info:after {
+  #a-propos .info:after {
     width: 34rem;
     right: -238px;
     top: 254px;
   }
 }
 @media screen and (max-width: 960px) {
-  #a-propos .social-media-links .info {
+  #a-propos .info {
     width: max-content;
   }
-  #a-propos .social-media-links .info:after {
+  #a-propos .info:after {
     display: none;
   }
-  #a-propos .social-media-links .info div {
+  #a-propos .info div {
     display: flex;
   }
 }
 @media screen and (max-width: 460px) {
-  #a-propos .social-media-links h2 {
+  #a-propos h2 {
     margin: 0;
   }
-  #a-propos .social-media-links .info {
+  #a-propos .info {
     display: flex;
     flex-direction: column;
     grid-column: 1/13;
     grid-row: 1;
   }
-  #a-propos .social-media-links .info:after {
+  #a-propos .info:after {
     display: none;
   }
-  #a-propos .social-media-links .info div {
+  #a-propos .info div {
     margin-left: 0;
   }
-  #a-propos .social-media-links .about {
+  #a-propos .about {
     grid-column: 1/13;
     grid-row: 2;
   }
-  #a-propos .social-media-links .citation {
+  #a-propos .citation {
     grid-column: 1/13;
     grid-row: 3;
   }
-  #a-propos .social-media-links .social-media-links {
+  #a-propos .social-media-links {
     grid-column: 1/13;
     grid-row: 4;
   }
@@ -1550,15 +1550,20 @@ html .content .img-setup-expanted #imgtext {
   margin: 0;
 }
 #projects ul li {
-  grid-column: 1/7;
   list-style: none;
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   font-size: 0.9rem;
 }
+#projects ul li#project-kelenscorp {
+  grid-column: 1/5;
+}
+#projects ul li#project-lafunattitude {
+  grid-column: 5/9;
+}
 #projects ul li:last-child {
-  grid-column: 7/13;
+  grid-column: 9/13;
   padding: 0;
 }
 #projects ul li h3 {
@@ -1609,8 +1614,14 @@ html .content .img-setup-expanted #imgtext {
     grid-column: 1/13 !important;
     grid-row: 1;
   }
-  #projects li:last-child {
+  #projects li#project-kelenscorp {
+    grid-row: 1;
+  }
+  #projects li#project-lafunattitude {
     grid-row: 2;
+  }
+  #projects li:last-child {
+    grid-row: 3;
   }
 }
 

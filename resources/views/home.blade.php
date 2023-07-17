@@ -16,10 +16,9 @@
                 {{-- Left part --}}
 
                 <div class="info">
-                    <img src="{{ asset('assets/img/avataaars.svg') }}" width="264px" height="280px" alt="Logo"
-                        class="load-hidden">
+                    <img src="{{ asset('assets/img/avataaars.svg') }}" width="264px" height="280px" alt="Logo">
 
-                    <div id="name load-hidden">
+                    <div id="name">
                         <h4>
                             Nom :
                         </h4>
@@ -27,7 +26,7 @@
                             {{ config('kelens.Info.username') }}
                         </p>
                     </div>
-                    <div id="age load-hidden">
+                    <div id="age">
                         <h4>
                             Âge :
                         </h4>
@@ -35,7 +34,7 @@
                             {{ config('kelens.Info.age') }} ans
                         </p>
                     </div>
-                    <div id="mail load-hidden">
+                    <div id="mail">
                         <h4>
                             Email :
                         </h4>
@@ -43,7 +42,7 @@
                             {{ config('kelens.Info.email') }}
                         </a>
                     </div>
-                    <div id="tel load-hidden">
+                    <div id="tel">
                         <h4>
                             Téléphone :
                         </h4>
@@ -51,7 +50,7 @@
                             {{ config('kelens.Info.tel') }}
                         </a>
                     </div>
-                    <div id="site load-hidden">
+                    <div id="site">
                         <h4>
                             Site professionnel :
                         </h4>
@@ -399,7 +398,7 @@
             </h2>
 
             <ul class="wrapper">
-                <li>
+                <li id="project-kelenscorp">
                     <h3>
                         <a href="{{ route('kelenscorp') }}">
                             KelenS CORP
@@ -411,7 +410,19 @@
                             alt="KelenS CORP" onclick="imgExpand(this);">
                     </div>
                 </li>
-                <li>
+                <li id="project-lafunattitude">
+                    <h3>
+                        <a href="#">
+                            La Fun Attitude
+                        </a>
+                    </h3>
+
+                    <div class="img-projects">
+                        <img class="img-fluid" src="{{ asset('assets/img/projects/accueil-mclfa.webp') }}"
+                            alt="mcLFA" onclick="imgExpand(this);">
+                    </div>
+                </li>
+                <li id="project-hydaria">
                     <h3>
                         <a href="{{ route('hydaria') }}">
                             Hydaria
@@ -419,8 +430,7 @@
                     </h3>
 
                     <div class="img-projects">
-                        <img class="img-fluid" src="{{ asset('assets/img/projects/accueil-mclfa.webp') }}"
-                            alt="mcLFA" onclick="imgExpand(this);">
+                        Le site est en cours de développement
                     </div>
                 </li>
             </ul>
