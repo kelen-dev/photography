@@ -28,7 +28,7 @@
     {{-- Fonts --}}
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://github.com/kelen-dev/photography/blob/master/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css">
 
     {{-- Page level scripts --}}
     @stack('scripts')
