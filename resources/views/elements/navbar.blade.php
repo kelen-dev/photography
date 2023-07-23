@@ -30,7 +30,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link @if(Route::is('setup')) active @endif" href="{{ route('setup') }}">
-                                <i class="bi bi-"> SETUP</i>
+                                <i class="bi bi-camera"> SETUP</i>
                             </a>
                         </li>
                         <li class="nav-item">

@@ -23,10 +23,6 @@ Route::get('/maintenance', function () {
     return view('maintenance');
 })->name('maintenance');
 
-Route::get('/cv', function () {
-    return view('/p/cv');
-})->name('cv');
-
 Route::get('/a-propos', function () {
     return view('/p/a-propos');
 })->name('a-propos');
@@ -38,18 +34,6 @@ Route::get('/mentions-legales', function () {
 Route::get('/setup', function () {
     return view('/p/setup');
 })->name('setup');
-
-Route::get('/projects/kelenscorp', function () {
-    return view('/p/projets/kelenscorp');
-})->name('kelenscorp');
-
-Route::get('/projects/hydaria', function () {
-    return view('/p/projets/hydaria');
-})->name('hydaria');
-
-Route::get('/projects/bountyfac', function () {
-    return view('/p/projets/bountyfac');
-})->name('bountyfac');
 
 Route::prefix('contact')->name('contact.')->group(function () {
     Route::get('/', [ContactsController::class, 'create'])->name('index');
