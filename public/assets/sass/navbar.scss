@@ -8,6 +8,7 @@
                 border-radius: 50%;
                 box-shadow: 0px 0px 10px 6px var(--black-color);
                 animation: logoFadeIn .6s ease-in-out;
+                transition: all .6s ease-in-out;
 
                 @keyframes logoFadeIn {
                     0% {
@@ -18,57 +19,64 @@
                         transform: scale(1);
                     }
                 }
+
+                &:hover {
+                    transform: rotate(360deg);
+                    box-shadow: none;
+                }
             }
         }
 
         .navbar-nav {
             animation: navFadeIn 1s ease-in-out;
-            
-            @keyframes navFadeIn {
-                    0% {
-                        opacity: 0;
-                        transform: translateY(-100%);
-                    }
 
-                    100% {
-                        opacity: 1;
-                        transform: translateY(0%);
-                    }
+            @keyframes navFadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-100%);
                 }
-                .nav-item {
-                    .nav-link {
-                        font-family: Merienda, cursive;
-                        font-size: 1.4rem;
-                        text-transform: uppercase;
-                        font-weight: 700;
-            
-                        .bi {
-                            animation: iconFadeIn .400s ease-in-out;
-                            animation-delay: 2s;
-                        
-                            @keyframes iconFadeIn {
-                                    0% {
-                                        transform: scale(0);
-                                    }
-            
-                                    100% {
-                                        transform: scale(1);
-                                    }
-                                }
-                        }
-                    }
-                    &.active {
-                        .nav-link {
-                            font-weight: 700;
-                            font-size: 20px;
-            
-                            &:after {
-                                transform: scaleX(0);
-                                transform-origin: left
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+            }
+
+            .nav-item {
+                .nav-link {
+                    font-family: Merienda, cursive;
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+
+                    .bi {
+                        animation: iconFadeIn .400s ease-in-out;
+                        animation-delay: 2s;
+
+                        @keyframes iconFadeIn {
+                            0% {
+                                transform: scale(0);
+                            }
+
+                            100% {
+                                transform: scale(1);
                             }
                         }
                     }
                 }
+
+                &.active {
+                    .nav-link {
+                        font-weight: 700;
+                        font-size: 20px;
+
+                        &:after {
+                            transform: scaleX(0);
+                            transform-origin: left
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -92,10 +100,10 @@
     .navbar-brand {
         padding: 0 0 0 3rem;
         margin: 0;
-    }
 
-    .navbar-brand, .navbar-brand img {
-        max-width: 60px
+        img {
+            max-width: 60px
+        }
     }
 
     .dropdown-toggle:after {
@@ -159,7 +167,8 @@
             padding: 0
         }
 
-        .navbar-brand, .navbar-brand img {
+        .navbar-brand,
+        .navbar-brand img {
             max-width: 80px
         }
 
@@ -523,13 +532,16 @@
         -webkit-transform: translate(0, 0);
         opacity: 0;
     }
+
     40% {
         opacity: 1;
     }
+
     80% {
         -webkit-transform: translate(0, 20px);
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
@@ -540,13 +552,16 @@
         transform: translate(0, 0);
         opacity: 0;
     }
+
     40% {
         opacity: 1;
     }
+
     80% {
         transform: translate(0, 20px);
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }

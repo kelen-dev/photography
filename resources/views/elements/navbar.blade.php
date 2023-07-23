@@ -24,39 +24,14 @@
                         </li>
                         @endif
                         <li class="nav-item">
-                            <a class="nav-link @if(Route::is('cv')) active @endif" href="{{ route('cv') }}">
-                                <i class="bi bi-file-earmark-pdf"> CV</i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link @if(Route::is('a-propos')) active @endif" href="{{ route('a-propos') }}">
                                 <i class="bi bi-clipboard"> A propos</i>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link @if(Route::is('setup')) active @endif" href="{{ route('setup') }}">
-                                <i class="bi bi-pc-display"> SETUP</i>
+                                <i class="bi bi-"> SETUP</i>
                             </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link @if(Route::is('kelenscorp', 'hydaria', 'bountyfac')) active @endif dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Projets</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item @if(Route::is('kelenscorp')) active @endif" href="{{ route('kelenscorp') }}">KelenS Corp</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li>
-                                    <a class="dropdown-item @if(Route::is('hydaria')) active @endif" href="{{ route('hydaria') }}">Hydaria</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li>
-                                    <a class="dropdown-item @if(Route::is('bountyfac')) active @endif" href="{{ route('bountyfac') }}">BountyFac</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link @if(Route::is('contact.index')) active @endif" href="{{ route('contact.index') }}">
@@ -80,7 +55,7 @@
 
             <div class="role">
                 <div class="block_KelenS"></div>
-                <p class="p_KelenS">Développeur web</p>
+                <p class="p_KelenS">Photographe</p>
             </div>
 
         </div>
