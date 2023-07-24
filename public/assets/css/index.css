@@ -884,7 +884,6 @@ html .content i + i {
   overflow: hidden;
   min-width: 600px;
   max-width: 100%;
-  width: calc(100% - 100px);
   height: 800px;
 }
 @media screen and (max-width: 718px) {
