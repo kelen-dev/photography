@@ -98,8 +98,8 @@
                             <i class="bi bi-car-front-fill"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Salon de l'auto</div>
-                            <div class="sub">devant d'une Aston Martin</div>
+                            <span class="main">Salon de l'auto</span>
+                            <span class="sub">devant d'une Aston Martin</span>
                         </div>
                     </div>
                 </div>
@@ -112,8 +112,8 @@
                             <i class="bi bi-car-front-fill"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Salon de l'auto</div>
-                            <div class="sub">Aile avant d'une Aston Martin</div>
+                            <span class="main">Salon de l'auto</span>
+                            <span class="sub">Aile avant d'une Aston Martin</span>
                         </div>
                     </div>
                 </div>
@@ -126,8 +126,8 @@
                             <i class="bi bi-car-front-fill"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Salon de l'auto</div>
-                            <div class="sub">Jante d'une Aston Martin</div>
+                            <span class="main">Salon de l'auto</span>
+                            <span class="sub">Jante d'une Aston Martin</span>
                         </div>
                     </div>
                 </div>
@@ -140,8 +140,8 @@
                             <i class="bi bi-car-front-fill"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Salon de l'auto</div>
-                            <div class="sub">Devant du Ford Raptor</div>
+                            <span class="main">Salon de l'auto</span>
+                            <span class="sub">Devant du Ford Raptor</span>
                         </div>
                     </div>
                 </div>
@@ -154,8 +154,8 @@
                             <i class="bi bi-car-front-fill"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Salon de l'auto</div>
-                            <div class="sub">Pneu du Ford Raptor</div>
+                            <span class="main">Salon de l'auto</span>
+                            <span class="sub">Pneu du Ford Raptor</span>
                         </div>
                     </div>
                 </div>
@@ -168,8 +168,8 @@
                             <i class="bi bi-car-front-fill"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Salon de l'auto</div>
-                            <div class="sub">Arrière du Ford Raptor</div>
+                            <span class="main">Salon de l'auto</span>
+                            <span class="sub">Arrière du Ford Raptor</span>
                         </div>
                     </div>
                 </div>
@@ -182,8 +182,8 @@
                             <i class="bi bi-car-front-fill"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Salon de l'auto</div>
-                            <div class="sub">Devant de la Mercedes EQE</div>
+                            <span class="main">Salon de l'auto</span>
+                            <span class="sub">Devant de la Mercedes EQE</span>
                         </div>
                     </div>
                 </div>
@@ -202,8 +202,8 @@
                             <i class="bi bi-flower1"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Jardin Henri Vinay</div>
-                            <div class="sub">fleurs côté gauche</div>
+                            <span class="main">Jardin Henri Vinay</span>
+                            <span class="sub">fleurs côté gauche</span>
                         </div>
                     </div>
                 </div>
@@ -216,8 +216,8 @@
                             <i class="bi bi-flower1"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Jardin Henri Vinay</div>
-                            <div class="sub">Montagne de fleurs avec tête de cigne</div>
+                            <span class="main">Jardin Henri Vinay</span>
+                            <span class="sub">Montagne de fleurs avec tête de cigne</span>
                         </div>
                     </div>
                 </div>
@@ -230,8 +230,8 @@
                             <i class="bi bi-flower1"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Jardin Henri Vinay</div>
-                            <div class="sub">Montagne de fleurs avec tête de cigne (plan large)</div>
+                            <span class="main">Jardin Henri Vinay</span>
+                            <span class="sub">Montagne de fleurs avec tête de cigne (plan large)</span>
                         </div>
                     </div>
                 </div>
@@ -244,8 +244,8 @@
                             <i class="bi bi-cup-hot"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Jardin Henri Vinay</div>
-                            <div class="sub">Snack</div>
+                            <span class="main">Jardin Henri Vinay</span>
+                            <span class="sub">Snack</span>
                         </div>
                     </div>
                 </div>
@@ -258,8 +258,8 @@
                             <i class="bi bi-flower1"></i>
                         </div>
                         <div class="info">
-                            <div class="main">Jardin Henri Vinay</div>
-                            <div class="sub">fleurs côté droit</div>
+                            <span class="main">Jardin Henri Vinay</span>
+                            <span class="sub">fleurs côté droit</span>
                         </div>
                     </div>
                 </div>

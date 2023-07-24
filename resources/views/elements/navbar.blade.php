@@ -1,10 +1,12 @@
-<div class="@if(Route::is('home')) home-background @elseif(Route::is('setup')) setup-background @endif">
+<div class="@if (Route::is('home')) home-background @endif">
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
-                <img class="img-fluid" src="{{ asset('assets/img/favicon.webp') }}" alt="{{ route('home') }}" class="d-lg-block d-sm-none">
+                <img class="img-fluid" src="{{ asset('assets/img/favicon.webp') }}" alt="{{ route('home') }}"
+                    class="d-lg-block d-sm-none">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                aria-controls="offcanvas" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -15,26 +17,30 @@
                 </div>
                 <div class="offcanvas-body justify-content-end">
                     <ul class="navbar-nav mb-2 mb-lg-0">
-                        @if(Route::is('home'))
+                        @if (Route::is('home'))
                         @else
-                        <li class="nav-item">
-                            <a class="nav-link @if(Route::is('home')) active @endif" aria-current="page" href="{{ route('home') }}">
-                                <i class="bi bi-house"> Accueil</i>
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link @if (Route::is('home')) active @endif" aria-current="page"
+                                    href="{{ route('home') }}">
+                                    <i class="bi bi-house"> Accueil</i>
+                                </a>
+                            </li>
                         @endif
                         <li class="nav-item">
-                            <a class="nav-link @if(Route::is('a-propos')) active @endif" href="{{ route('a-propos') }}">
+                            <a class="nav-link @if (Route::is('a-propos')) active @endif"
+                                href="{{ route('a-propos') }}">
                                 <i class="bi bi-clipboard"> A propos</i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link @if(Route::is('setup')) active @endif" href="{{ route('setup') }}">
+                            <a class="nav-link @if (Route::is('setup')) active @endif"
+                                href="{{ route('setup') }}">
                                 <i class="bi bi-camera"> SETUP</i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link @if(Route::is('contact.index')) active @endif" href="{{ route('contact.index') }}">
+                            <a class="nav-link @if (Route::is('contact.index')) active @endif"
+                                href="{{ route('contact.index') }}">
                                 <i class="bi bi-envelope"> Contact</i>
                             </a>
                         </li>
@@ -44,48 +50,25 @@
         </div>
     </nav>
 
-    @if(Route::is('home'))
-    <div class="container">
-        <div class="box_KelenS">
+    @if (Route::is('home'))
+        <div class="container">
+            <div class="box_KelenS">
 
-            <div class="title_KelenS">
-                <span class="block_KelenS"></span>
-                <h1 class="h1_KelenS">Sean SEGURA<span></span></h1>
+                <div class="title_KelenS">
+                    <span class="block_KelenS"></span>
+                    <h1 class="h1_KelenS">Sean SEGURA<span></span></h1>
+                </div>
+
+                <div class="role">
+                    <div class="block_KelenS"></div>
+                    <p class="p_KelenS">Photographe</p>
+                </div>
+
             </div>
-
-            <div class="role">
-                <div class="block_KelenS"></div>
-                <p class="p_KelenS">Photographe</p>
-            </div>
-
         </div>
-    </div>
 
-    <div id="scroll-down" class="down">
-        <a href="#a-propos"><span></span>Scroll to about</a>
-    </div>
-    @endif
-
-    @if(Route::is('setup'))
-    <div class="container">
-        <div class="box_KelenS">
-
-            <div class="title_KelenS">
-                <span class="block_KelenS"></span>
-                <h1 class="h1_KelenS">Mon SETUP<span></span></h1>
-            </div>
-
-            <div class="role">
-                <div class="block_KelenS"></div>
-                <p class="p_KelenS">#2023</p>
-            </div>
-
+        <div id="scroll-down" class="down">
+            <a href="#a-propos"><span></span>Scroll to about</a>
         </div>
-    </div>
-
-    <div id="scroll-down" class="down">
-        <a href="#summary"><span></span>Scroll to about</a>
-    </div>
     @endif
-
 </div>

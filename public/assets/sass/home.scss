@@ -191,7 +191,7 @@
                         bottom: 10px;
                         left: 10px;
 
-                        .info>div {
+                        .info>span {
                             left: 20px;
                             opacity: 0;
                         }
@@ -235,7 +235,7 @@
                         color: var(--white-color);
                         white-space: pre;
 
-                        >div {
+                        >span {
                             position: relative;
                             transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95),
                                 opacity 0.5s ease-out;
@@ -250,6 +250,14 @@
                             transition-delay: 0.1s;
                         }
                     }
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+                
+                &:last-child {
+                    margin-right: 0;
                 }
             }
         }

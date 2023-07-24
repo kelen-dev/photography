@@ -961,7 +961,7 @@ html .content i + i {
   bottom: 10px;
   left: 10px;
 }
-#pictures .container .pictures .picture:not(.active) .label .info > div {
+#pictures .container .pictures .picture:not(.active) .label .info > span {
   left: 20px;
   opacity: 0;
 }
@@ -1000,7 +1000,7 @@ html .content i + i {
   color: var(--white-color);
   white-space: pre;
 }
-#pictures .container .pictures .picture .label .info > div {
+#pictures .container .pictures .picture .label .info > span {
   position: relative;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
 }
@@ -1010,6 +1010,12 @@ html .content i + i {
 }
 #pictures .container .pictures .picture .label .info .sub {
   transition-delay: 0.1s;
+}
+#pictures .container .pictures .picture:first-child {
+  margin-left: 0;
+}
+#pictures .container .pictures .picture:last-child {
+  margin-right: 0;
 }
 @media screen and (max-width: 500px) {
   #pictures .container h2 {
