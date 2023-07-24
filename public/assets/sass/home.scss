@@ -4,65 +4,14 @@
 #a-propos {
     @include h2;
 
-    .info {
-        position: relative;
-        grid-column: 1 / 4;
-        grid-row: 1 / 4;
-
-        &:after {
-            content: "";
-            position: absolute;
-            background: var(--color-accent);
-            height: 2px;
-            width: 34rem;
-            right: -250px;
-            top: 254px;
-            transform: rotate(90deg);
-        }
-
-        img {
-            margin-top: -1rem;
-            margin-bottom: 1rem;
-        }
-
-        div {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-bottom: 2rem;
-            margin-left: 1rem;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            h4 {
-                color: var(--color-title-propos);
-                margin-right: .2rem;
-                font-size: 1rem;
-            }
-        }
-    }
-
-    .about {
-        grid-column: 4 / 13;
-        grid-row: 1;
-
-        p {
-            text-align: justify;
-            margin-bottom: 1rem;
-        }
-    }
-
     .citation {
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: var(--color-contrast-lower);
-        padding: 1rem;
-        grid-column: 4 / 13;
-        grid-row: 2;
+        text-align: justify;
+        padding: 0 1rem 0 1rem;
+        grid-row: 1;
 
         @include h3;
 
@@ -92,8 +41,7 @@
     }
 
     .social-media-links {
-        grid-column: 4 / 13;
-        grid-row: 3;
+        grid-row: 1;
         overflow: hidden;
         padding-bottom: 4px;
         width: 100%;
@@ -149,362 +97,167 @@
         }
     }
 
-    @media screen and (min-width: 2500px) {
-        .info {
-            padding-left: 10rem;
-
-            &:after {
-                width: 34rem;
-                right: -238px;
-                top: 254px;
-            }
-        }
-    }
-
-    @media screen and (max-width: 960px) {
-        .info {
-            width: max-content;
-
-            &:after {
-                display: none;
-            }
-
-            div {
-                display: flex;
-            }
-        }
-    }
-
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 500px) {
         h2 {
             margin: 0;
-        }
-
-        .info {
-            display: flex;
-            flex-direction: column;
-            grid-column: 1 / 13;
-            grid-row: 1;
-
-            &:after {
-                display: none;
-            }
-
-            div {
-                margin-left: 0;
-            }
-        }
-
-        .about {
-            grid-column: 1 / 13;
-            grid-row: 2;
         }
 
         .citation {
-            grid-column: 1 / 13;
-            grid-row: 3;
+            grid-row: 1;
         }
 
         .social-media-links {
-            grid-column: 1 / 13;
-            grid-row: 4;
-        }
-    }
-}
-
-
-/* ==========================================================================
-   Section résumé:
-   ========================================================================== */
-#abstract {
-    background-color: var(--color-contrast-lower);
-
-    ul+ {
-        ul {
-            margin-top: 2rem;
-        }
-    }
-
-    @include h2;
-
-    .hobby {
-        position: relative;
-        grid-column: 1 / 4;
-        grid-row: 1;
-        padding-right: 4rem;
-
-        &:after {
-            content: "";
-            position: absolute;
-            background: var(--color-accent);
-            height: 2px;
-            width: 71rem;
-            right: -546px;
-            top: 562px;
-            transform: rotate(90deg);
-        }
-
-        i {
-            display: flex;
-            align-items: flex-end;
-            flex-direction: column;
-            @include text-shadow;
-
-            p {
-                hyphens: auto;
-                text-align: end;
-            }
-        }
-    }
-
-    .langages {
-        grid-column: 4 / 13;
-        margin-bottom: 1rem;
-
-        @include h3;
-
-        ul {
-            margin: 0;
-
-            li {
-                list-style: none;
-                padding-bottom: 1rem;
-                text-align: center;
-                display: flex;
-                font-size: 0.9rem;
-                align-items: center;
-
-                &:last-child {
-                    padding: 0;
-                }
-            }
-        }
-
-        .logo {
-            width: 54px;
-            height: 54px;
-            border-radius: 50%;
-            background: none;
-            margin-right: 1rem;
-
-            img {
-                position: relative;
-                background-clip: padding-box;
-                border-radius: inherit;
-                width: 54px;
-                height: 100%;
-                object-fit: contain;
-                z-index: 1;
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    z-index: -1;
-                    margin: -8px;
-                    /* same as border width */
-                    border-radius: 50%;
-                    /* inherit container box's radius */
-                    background: linear-gradient(45deg, rgb(255, 230, 0), rgb(255, 0, 128) 80%);
-                }
-            }
-        }
-
-        .barre {
-            width: 100%;
-            background: #44615E;
-            position: relative;
-            height: 10px;
-
-            +.barre {
-                margin-top: 10px;
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                background: $rose;
-                left: 0;
-                top: 0;
-                bottom: 0;
-            }
-
-            @for $i from 10 through 100 {
-                &[data-length="#{$i}"]:after {
-                    width: #{$i}+"%";
-                }
-            }
-        }
-
-        @include button-("html", var(--color-html));
-        @include button-("css", var(--color-css));
-        @include button-("sass", var(--color-sass));
-        @include button-("js", var(--color-js));
-        @include button-("php", var(--color-php));
-        @include button-("git", var(--color-git));
-    }
-
-    .education {
-        grid-column: 4 / 8;
-    }
-
-    .education,
-    .experience {
-        @include h3;
-
-        .date {
-            @include text-shadow;
-            font-size: 1.2rem;
-            font-weight: 900;
-            background-color: var(--background-color);
-            width: fit-content;
-            padding: .2rem;
-            box-shadow: 0 0 6px var(--black-color);
-        }
-
-        .name {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: var(--white-color);
-            @include text-shadow;
-        }
-
-        .description {
-            font-size: 1.2rem;
-        }
-    }
-
-    .experience {
-        grid-column: 9 / 13;
-    }
-
-
-    @media screen and (min-width: 2500px) {
-        .hobby {
-            padding-left: 10rem;
-
-            &:after {
-                width: 68rem;
-                right: -510px;
-                top: 542px;
-            }
-        }
-    }
-
-    @media screen and (max-width: 460px) {
-        h2 {
-            margin: 0;
-        }
-
-        .hobby {
-            align-content: center;
-            grid-column: 1 / 4;
-            grid-row: 1;
-            padding-right: 3rem;
-
-            i {
-                p {
-                    display: none;
-                }
-            }
-
-            &:after {
-                width: 113rem;
-                right: -868px;
-                top: 902px;
-            }
-        }
-
-        .langages {
-            grid-column: 4 / 13;
-            grid-row: 1;
-        }
-
-        .education {
-            grid-column: 4 / 13;
             grid-row: 2;
         }
-
-        .experience {
-            grid-column: 4 / 13;
-            grid-row: 3;
-        }
     }
 }
 
+
 /* ==========================================================================
-   Section projets:
+   Section photos:
    ========================================================================== */
-#projects {
-    @include h2;
-    position: relative;
+#pictures {
+    .container {
+        @include h2;
 
-    ul {
-        margin: 0;
+        @include h3;
 
-        li {
-            list-style: none;
-            padding-bottom: 1rem;
+        .pictures {
             display: flex;
-            flex-direction: column;
-            font-size: 0.9rem;
+            flex-direction: row;
+            align-items: stretch;
+            overflow: hidden;
+            min-width: 600px;
+            max-width: 100%;
+            width: calc(100% - 100px);
+            height: 800px;
 
-            &#project-kelenscorp {
-                grid-column: 1 / 5;
+            @for $i from 1 through 4 {
+                @media screen and (max-width: 798px - $i*80) {
+                    min-width: 600px - $i * 80;
+
+                    .picture:nth-child(#{6-$i}) {
+                        display: none;
+                    }
+                }
             }
 
-            &#project-lafunattitude {
-                grid-column: 5 / 9;
-            }
+            .picture {
+                position: relative;
+                overflow: hidden;
+                min-width: 60px;
+                margin: 10px;
+                background: var(--pictureBackground);
+                background-size: auto 120%;
+                background-position: center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 
-            &:last-child {
-                grid-column: 9 / 13;
-                padding: 0;
-            }
+                &.active {
+                    flex-grow: 10000;
+                    transform: scale(1);
+                    max-width: 100%;
+                    margin: 0px;
+                    border-radius: 40px;
+                    background-size: auto 100%;
 
-            @include h3;
+                    .picture-shadow {
+                        box-shadow: inset 0 -120px 120px -120px var(--black-color),
+                            inset 0 -120px 120px -100px var(--black-color);
+                    }
 
-            .img-projects {
-                text-align: center;
+                    .label {
+                        bottom: 20px;
+                        left: 20px;
 
-                img {
-                    width: max-content;
-                    max-height: 400px;
-                    padding: 10px;
-                    opacity: 0.8;
-                    cursor: pointer;
-                    transition: opacity ease-in-out .2s;
+                        .info>div {
+                            left: 0px;
+                            opacity: 1;
+                        }
+                    }
+                }
 
-                    &:hover {
-                        opacity: 1;
+                &:not(.active) {
+                    flex-grow: 1;
+                    border-radius: 20px;
+
+                    .picture-shadow {
+                        bottom: -40px;
+                        box-shadow: inset 0 -120px 0px -120px var(--black-color),
+                            inset 0 -120px 0px -100px var(--black-color);
+                    }
+
+                    .label {
+                        bottom: 10px;
+                        left: 10px;
+
+                        .info>div {
+                            left: 20px;
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                .picture-shadow {
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    right: 0px;
+                    height: 120px;
+                    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+                }
+
+                .label {
+                    display: flex;
+                    position: absolute;
+                    right: 0px;
+                    height: 40px;
+                    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+                    .icon {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        min-width: 40px;
+                        max-width: 40px;
+                        height: 40px;
+                        border-radius: 100%;
+                        background-color: var(--white-color);
+                        color: var(--defaultBackground);
+                    }
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        margin-left: 10px;
+                        color: var(--white-color);
+                        white-space: pre;
+
+                        >div {
+                            position: relative;
+                            transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95),
+                                opacity 0.5s ease-out;
+                        }
+
+                        .main {
+                            font-weight: bold;
+                            font-size: 1.2rem;
+                        }
+
+                        .sub {
+                            transition-delay: 0.1s;
+                        }
                     }
                 }
             }
         }
-    }
 
-    @media screen and (max-width: 460px) {
-        h2 {
-            margin: 0;
-        }
-
-        li {
-            grid-column: 1 / 13 !important;
-            grid-row: 1;
-
-            &#project-kelenscorp {
-                grid-row: 1;
-            }
-
-            &#project-lafunattitude {
-                grid-row: 2;
-            }
-
-            &#project-hydaria {
-                grid-row: 3;
+        @media screen and (max-width: 500px) {
+            h2 {
+                margin: 0;
             }
         }
     }

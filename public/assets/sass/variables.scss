@@ -1,5 +1,6 @@
 $background-color: #17181c;
-$background-gradient: linear-gradient(160deg, var(--rose-color) 0%, var(--blue-color) 99%);
+$background-gradient: linear-gradient(135deg, transparent, transparent 21%, #151618 0, #151618 48%, transparent 0, transparent 95%, #111114 0, #111114), linear-gradient(45deg, transparent, transparent 6%, #101114 0, #101114 13%, #26272d 0, #26272d 32%, transparent 0, transparent), linear-gradient(90deg, #17181c, #17181c);
+$rose-gradient: linear-gradient(160deg, var(--rose-color) 0%, var(--blue-color) 99%);
 $white: #ffffff;
 $black: #000000;
 $rose: #D0368A;
@@ -12,12 +13,13 @@ $discord-color: #5865F2;
 
 :root {
     --background-color: #{$background-color};
+    --background-gradient: #{$background-gradient};
     --white-color: #{$white};
     --black-color: #{$black};
     --rose-color: #{$rose};
     --blue-color: #{$blue};
     --grey-color: #{$grey};
-    --background-gradient: #{$background-gradient};
+    --rose-gradient: #{$rose-gradient};
     --facebook-color: #{$facebook-color};
     --twitter-color: #{$twitter-color};
     --instagram-color: #{$instagram-color};

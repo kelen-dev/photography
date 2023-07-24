@@ -13,10 +13,27 @@
 html {
     max-width: 100%;
 
-    .sr {
-        .load-hidden {
-            visibility: hidden;
-        }
+
+    /* ==========================================================================
+    Scrollbar:
+    ========================================================================== */
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #181a1e;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-image: var(--rose-gradient);
+        box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.9);
+        border-radius: 100px;
     }
 
     body {
@@ -58,7 +75,7 @@ html {
                 transform: scaleX(0);
                 transition: transform .6s;
                 transform-origin: 100% 0;
-                background: var(--background-gradient);
+                background: var(--rose-gradient);
             }
 
             &:hover {
@@ -80,30 +97,25 @@ html {
     /* ==========================================================================
         Liens:
     ========================================================================== */
-    a {
+    a,
+    i {
         text-decoration: none;
-        color: var(--white-color);
+        color: var(--rose-color);
         transition: ease-in-out .2s;
 
         &:hover {
-            color: #708AD4;
+            color: var(--blue-color);
         }
     }
 
-    a,
-    p,
-    i {
+    p {
         font-family: Noto Sans JP, sans-serif;
         color: var(--white-color);
     }
 
-    .bg-accent-darker {
-        background-color: hsla(var(--color-accent-darker-h), var(--color-accent-darker-s), var(--color-accent-darker-l), var(--bg-o, 1));
-    }
-
     .wrapper {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: fit-content(100%);
         grid-gap: 10px;
     }
 
@@ -157,7 +169,7 @@ html {
             line-height: 0;
 
             &.btn-principal {
-                background: var(--background-gradient);
+                background: var(--rose-gradient);
 
                 &:hover {
                     color: var(--white-color);
@@ -171,37 +183,6 @@ html {
         i+ {
             i {
                 margin-top: 1rem;
-            }
-        }
-
-        /* ==========================================================================
-            IMGS:
-        ========================================================================== */
-        .img-setup-expanted {
-            position: relative;
-
-            .closebtn {
-                position: absolute;
-                top: 10px;
-                right: 15px;
-                color: var(--white-color);
-                font-size: 35px;
-                cursor: pointer;
-            }
-
-            #expandedImg {
-                width: 100%;
-            }
-
-            #imgtext {
-                background: rgba(16, 15, 15, 0.6);
-                border-radius: 20px;
-                position: absolute;
-                font-size: 20px;
-                padding: .6rem;
-                bottom: 15px;
-                color: var(--white-color);
-                left: 15px;
             }
         }
     }

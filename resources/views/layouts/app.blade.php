@@ -9,18 +9,18 @@
     <meta name="author" content="KelenS">
 
     <meta property="og:title" content="@yield('title')">
-    <meta property="og:type" content="@yield('type', 'site professionnel')">
+    <meta property="og:type" content="@yield('type', 'portfolio')">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('assets/img/favicon.webp') }}">
     <meta property="og:description" content="@yield('description')">
-    <meta property="og:site_name" content="Sean Segura">
+    <meta property="og:site_name" content="Photography by Sean Segura">
     @stack('meta')
 
     {{-- CSRF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- Title --}}
-    <title>@yield('title') | Sean Segura</title>
+    <title>@yield('title') | Photography by Sean Segura</title>
 
     {{-- Favicon --}}
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.webp') }}">
@@ -39,7 +39,7 @@
     <script src="{{ asset('assets/js/css-vars-ponyfill.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/app.js') }}" defer></script>
     <script src="{{ asset('assets/js/button.js') }}" defer></script>
-    <script src="{{ asset('assets/js/imgexpand.js') }}" defer></script>
+    <script src="{{ asset('assets/js/home_img.js') }}" defer></script>
     <script src="{{ asset('assets/js/discord-widget.js') }}" defer></script>
 
     {{-- Bootstrap --}}
@@ -47,11 +47,8 @@
     <script src="https://unpkg.com/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
     {{-- Styles --}}
-    <link href="{{ asset('assets/css/scrollbar.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/variables.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/index.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/widgets.css') }}" rel="stylesheet">
     @stack('styles')
 </head>
 
@@ -71,15 +68,6 @@
 
     <main class="content">
         @yield('content')
-        @if(Route::is('home', 'cv'))
-            {{-- Download CV --}}
-            <section id="cv">
-                <a href="{{ asset('assets/pdf/cv.pdf') }}" target="_blank" class="btn btn-principal">
-                    Télécharger le CV
-                </a>
-            </section>
-        @else
-        @endif
     </main>
 
     <footer class="footer @if(Route::is('contact.index', 'mentions-legales')) fixed-footer @endif">
