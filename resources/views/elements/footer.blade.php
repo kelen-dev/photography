@@ -5,7 +5,7 @@
                 <div class="container">
                     Copyright &copy; 2021&dash;{{ date('Y') }}
                     &mid;
-                    1.5.0
+                    1.0.0
                     &middot;
                     <a href="https://kelens.fr/" target="_blank" rel="noopener noreferrer">Édité par KelenS Corp</a>
                 </div>
