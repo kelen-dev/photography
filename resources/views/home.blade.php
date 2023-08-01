@@ -91,7 +91,7 @@
             </h3>
             <div class="pictures">
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Devant de l_Aston Martin.jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Devant de l_Aston Martin.webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Aile avant de l_Aston Martin.jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Aile avant de l_Aston Martin.webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
@@ -119,7 +119,7 @@
                 </div>
 
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Jante de l_Aston Martin.jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Jante de l_Aston Martin.webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
@@ -133,7 +133,7 @@
                 </div>
 
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Devant du Ford Raptor.jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Devant du Ford Raptor.webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
@@ -147,7 +147,7 @@
                 </div>
 
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Pneu du Ford Raptor.jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Pneu du Ford Raptor.webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
@@ -161,7 +161,7 @@
                 </div>
 
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Arrière du Ford Raptor.jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Arrière du Ford Raptor.webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
@@ -175,7 +175,7 @@
                 </div>
 
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Devant de la Mercedes EQE.jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Salon de l_auto/Devant de la Mercedes EQE.webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
@@ -195,7 +195,7 @@
             </h3>
             <div class="pictures">
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Jardin Henri Vinay/fleurs côté gauche du jardin Henri Vinay.jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Jardin Henri Vinay/fleurs côté gauche du jardin Henri Vinay.webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
@@ -209,7 +209,7 @@
                 </div>
 
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Jardin Henri Vinay/montagne de fleurs avec cigne au jardin Henri Vinay.jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Jardin Henri Vinay/montagne de fleurs avec cigne au jardin Henri Vinay.webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
@@ -223,7 +223,7 @@
                 </div>
 
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Jardin Henri Vinay/Montagne de fleurs cigne (plan large).jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Jardin Henri Vinay/Montagne de fleurs cigne (plan large).webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
@@ -237,7 +237,7 @@
                 </div>
 
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Jardin Henri Vinay/snack du jardin Henri Vinay.jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Jardin Henri Vinay/snack du jardin Henri Vinay.webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
@@ -251,7 +251,7 @@
                 </div>
 
                 <div class="picture"
-                    style="--pictureBackground:url('{{ asset('assets/img/home/Jardin Henri Vinay/fleurs côté droit du jardin Henri Vinay.jpg') }}');">
+                    style="--pictureBackground:url('{{ asset('assets/img/home/Jardin Henri Vinay/fleurs côté droit du jardin Henri Vinay.webp') }}');">
                     <div class="picture-shadow"></div>
                     <div class="label">
                         <div class="icon">
